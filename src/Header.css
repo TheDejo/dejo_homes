@@ -1,0 +1,42 @@
+header {
+  /* background: #1F2732; */
+  background: white;
+  width: 100%;
+  overflow: auto;
+  padding: 20px 15px;
+  border-bottom: 1px solid lightgrey;
+}
+header .logo {
+  float: left;
+  color: #1F2732;
+  font-size: 30px;
+  font-family: 'Bad Script', cursive;
+  margin: -20px 0;
+}
+header .logo .home {
+    font-family: 'Bad Script', cursive;
+    color: #DB3977;
+}
+header nav {
+  float: right;
+}
+header a {
+  color: #1F2732;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+header a:hover {
+  color: #DB3977;
+  transition: .2s ease-in-out;
+}
+header .signup-button {
+  background: #216699;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+header .signup-button:hover {
+  background: #DB3977;
+  color: white;
+}
