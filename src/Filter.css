@@ -1,3 +1,9 @@
+/* colors */
+  /* pink:#DB3977
+    black:#1F2732
+    blue:#216699
+    turqoise:#00BEA3
+    offwhite:#FEFDF6 */
 #filter {
   /* background: #FEFDF6; */
   background: #FAFAFA;
@@ -27,10 +33,16 @@ select {
   margin-bottom: 25px;
   width: 100%;
 }
+select:focus {
+  outline: none;
+}
 .title {
   display: block;
   margin-bottom: 6px;
   font-weight: 500;
+}
+input:focus {
+  outline: none;
 }
 input[type="text"] {
   width: 60%;
