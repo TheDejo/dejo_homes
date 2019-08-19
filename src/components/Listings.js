@@ -4,7 +4,10 @@ function Listings() {
   return (
       <section id="listings">
         <section className="search-area">
-          <input type='text' name="search"/>
+          <div className="close-button">
+            <i className="fa fa-times"></i>
+          </div>
+          <input type='text' name="search" placeholder="Search"/>
         </section>
 
         <section className="sort">
