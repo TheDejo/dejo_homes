@@ -1,24 +1,50 @@
+* colors */
+  /* pink:#DB3977
+    black:#1F2732
+    blue:#216699
+    turqoise:#00BEA3
+    offwhite:#FEFDF6 */
+
+/* Top of Content Area */
 #listings {
   width: 65%;
   padding: 15px;
   float: left;
   display: inline-block;
 }
-.search-area input[type="text"] {
+.search-area  {
   width: 65%;
+  position: relative;
+}
+.search-area .fa {
+  float: right;
+  color: lightgrey;
+  position: absolute;
+}
+.search-area .fa:hover {
+  cursor: pointer;
+}
+.search-area input[type="text"] {
+  width: 100%;
   background:transparent;
-  font-size: 10px;
+  font-size: 13px;
   border: none;
   border-bottom: 1px solid lightgrey;
   margin-bottom: 20px;
   border-radius: 0px;
+}
+.search-area input[placeholder] {
+  padding-left: 40px;
+}
+.search-area input::placeholder {
+  color: lightgrey;
 }
 .sort {
   margin-bottom: 20px;
 }
 .sort .main-results {
   font-size: 14px;
-  color: lightgrey;
+  color: #216699;
   display: inline-block;
 }
 .sort .sort-options {
@@ -40,8 +66,11 @@
   margin-right: 15px;
 }
 
-
-
+/* Listing results */
+.list-results .list {
+  background: white;
+  width: 33.333%
+}
 
 
 
