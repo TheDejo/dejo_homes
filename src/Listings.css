@@ -1,10 +1,14 @@
-* colors */
+/* colors */
   /* pink:#DB3977
     black:#1F2732
     blue:#216699
     turqoise:#00BEA3
     offwhite:#FEFDF6 */
 
+#content-area {
+  overflow: auto;
+  width: 100%;
+}
 /* Top of Content Area */
 #listings {
   width: 65%;
@@ -67,11 +71,47 @@
 }
 
 /* Listing results */
+.list-results {
+  margin-bottom: 60px;
+}
 .list-results .list {
   background: white;
-  width: 33.333%
+  width: 33.333%;
+  border-radius: 5px;
+  -webkit-box-shadow: 9px 9px 9px -6px rgba(179,179,179,1);
+  -moz-box-shadow: 9px 9px 9px -6px rgba(179,179,179,1);
+  box-shadow: 9px 9px 9px -6px rgba(179,179,179,1);
 }
+.list-img {
+  background: url(https://i.pinimg.com/originals/de/ef/7a/deef7a9070f5de8c52ff5f4f4aec1e79.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:200px;
+  padding: 15px;
+  color: white;
+  position: relative;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgb(219,57,119); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(219,57,119,.8) 0%, rgba(255,93,177,.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(219,57,119,.8) 0%,rgba(255,93,177,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(219,57,119,.8) 0%,rgba(255,93,177,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db3977', endColorstr='#ff5db1',GradientType=1 ); /* IE6-9 */
 
+}
 
 
 
