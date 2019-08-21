@@ -11,7 +11,7 @@
 }
 /* Top of Content Area */
 #listings {
-  width: 65%;
+  width: 75%;
   padding: 15px;
   float: left;
   display: inline-block;
@@ -74,9 +74,18 @@
 .list-results {
   margin-bottom: 60px;
 }
+.col {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  padding:0 15px;
+}
+.col-2 {
+  width: 75%;
+  display: inline-block;
+}
 .list-results .list {
   background: white;
-  width: 33.333%;
   border-radius: 5px;
   -webkit-box-shadow: 9px 9px 9px -6px rgba(179,179,179,1);
   -moz-box-shadow: 9px 9px 9px -6px rgba(179,179,179,1);
@@ -99,7 +108,20 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+.list-img:hover .details {
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+.list-img:hover .address {
+  opacity: 0;
+}
+.address {
+  position: absolute;
+  bottom: 20px;
+  opacity: 1;
+}
 .details {
+  opacity: 0;
   position: absolute;
   padding: 30px;
   top: 0;
@@ -127,8 +149,8 @@
 .user-details {
   vertical-align: top;
   display: inline-block;
-  width: 70%;
-  margin-left: 20px
+  /* width: 70%;
+  margin-left: 20px; */
 }
 .user-name {
   color: white;
@@ -141,16 +163,40 @@
   opacity: .7;
   display: block;
   font-size: 12px;
+  font-weight: 300;
 }
 .list-details {
-  margin-top: 10px;
+  margin-top: 20px;
 }
-.list-details .fa,
-.list-details span {
+.list-details .fa {
   display: inline-block;
+  margin-right: 14px;
 }
-
-
+.list-details span {
+  font-size: 12px;
+  padding-right: 4px;
+  font-weight: 300;
+  vertical-align: middle;
+  position: relative;
+}
+.bottom-info {
+  padding: 20px 15px;
+}
+.price {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  color: grey;
+}
+.location {
+  font-size: 20px;
+  display: block;
+  color: grey;
+}
+.location .fa {
+  color: #216699;
+  padding-right: 10px
+}
 
 
 
