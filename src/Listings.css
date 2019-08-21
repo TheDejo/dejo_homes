@@ -101,21 +101,54 @@
 }
 .details {
   position: absolute;
+  padding: 30px;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background: rgb(219,57,119); /* Old browsers */
-  background: -moz-linear-gradient(left, rgba(219,57,119,.8) 0%, rgba(255,93,177,.8) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(219,57,119,.8) 0%,rgba(255,93,177,.8) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgba(219,57,119,.8) 0%,rgba(255,93,177,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(left, rgba(219,57,119,.7) 0%, rgba(255,93,177,.7) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(219,57,119,.7) 0%,rgba(255,93,177,.7) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(219,57,119,.7) 0%,rgba(255,93,177,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db3977', endColorstr='#ff5db1',GradientType=1 ); /* IE6-9 */
-
 }
-
-
-
-
+.user-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: inline-block;
+  background: url(https://i.pinimg.com/originals/de/ef/7a/deef7a9070f5de8c52ff5f4f4aec1e79.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.user-details {
+  vertical-align: top;
+  display: inline-block;
+  width: 70%;
+  margin-left: 20px
+}
+.user-name {
+  color: white;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.post-date {
+  color: white;
+  opacity: .7;
+  display: block;
+  font-size: 12px;
+}
+.list-details {
+  margin-top: 10px;
+}
+.list-details .fa,
+.list-details span {
+  display: inline-block;
+}
 
 
 
