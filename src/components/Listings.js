@@ -27,37 +27,121 @@ function Listings() {
         </section>
 
         <section className="list-results">
-          <div className="list">
-            <div className="list-img">
-              <span className="address">Address</span>
-              <div className="details">
-                <div className="user-img"></div>
-                <div className="user-details">
-                  <span className="user-name">Marcus Aurelius</span>
-                  <span className="post-date">08/10/2019</span>
-                </div>
-                <div className="list-details">
-                  <div className="floor-space">
-                    <i className="fa fa-home"></i>
-                      <span>2500 ft&sup2;</span>
+          <div className="col">
+            <div className="list">
+              <div className="list-img">
+                <span className="address">5777 Stoic Ln.</span>
+                <div className="details">
+                  <div className="col">
+                    <div className="user-img"></div>
                   </div>
-                  <div className="bedrooms">
-                    <i className="fa fa-bed"></i>
-                      <span>3 br</span>
-                  </div>
-                  <div className="baths">
-                    <i className="fa fa-bath"></i>
-                      <span>2 ba</span>
+
+                  <div className='col-2'>
+                    <div className="user-details">
+                      <span className="user-name">Marcus Aurelius</span>
+                      <span className="post-date">08/10/2019</span>
+                    </div>
+                    <div className="list-details">
+                      <div className="floor-space">
+                        <i className="fa fa-home"></i>
+                        <span>2500 ft&sup2;</span>
+                      </div>
+                      <div className="bedrooms">
+                        <i className="fa fa-bed"></i>
+                        <span>3 br</span>
+                      </div>
+                      <div className="baths">
+                        <i className="fa fa-bath"></i>
+                        <span>2 ba</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div className="bottom-info">
+                <span className="price">$1450 / mo</span>
+                <span className="location"><i className="fa fa-map-marker"></i>Oakville,MO</span>
+              </div>
             </div>
-            <div className="bottom-info">
-              <span>$1450 / mo</span>
-              <span><i className="fa fa-map-marker"></i>Oakville,MO</span>
+          </div>
+
+          <div className="col">
+            <div className="list">
+              <div className="list-img">
+                <span className="address">5777 Stoic Ln.</span>
+                <div className="details">
+                  <div className="col">
+                    <div className="user-img"></div>
+                  </div>
+
+                  <div className='col-2'>
+                    <div className="user-details">
+                      <span className="user-name">Marcus Aurelius</span>
+                      <span className="post-date">08/10/2019</span>
+                    </div>
+                    <div className="list-details">
+                      <div className="floor-space">
+                        <i className="fa fa-home"></i>
+                        <span>2500 ft&sup2;</span>
+                      </div>
+                      <div className="bedrooms">
+                        <i className="fa fa-bed"></i>
+                        <span>3 br</span>
+                      </div>
+                      <div className="baths">
+                        <i className="fa fa-bath"></i>
+                        <span>2 ba</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bottom-info">
+                <span className="price">$1450 / mo</span>
+                <span className="location"><i className="fa fa-map-marker"></i>Oakville,MO</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="col">
+            <div className="list">
+              <div className="list-img">
+                <span className="address">5777 Stoic Ln.</span>
+                <div className="details">
+                  <div className="col">
+                    <div className="user-img"></div>
+                  </div>
+
+                  <div className='col-2'>
+                    <div className="user-details">
+                      <span className="user-name">Marcus Aurelius</span>
+                      <span className="post-date">08/10/2019</span>
+                    </div>
+                    <div className="list-details">
+                      <div className="floor-space">
+                        <i className="fa fa-home"></i>
+                        <span>2500 ft&sup2;</span>
+                      </div>
+                      <div className="bedrooms">
+                        <i className="fa fa-bed"></i>
+                        <span>3 br</span>
+                      </div>
+                      <div className="baths">
+                        <i className="fa fa-bath"></i>
+                        <span>2 ba</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bottom-info">
+                <span className="price">$1450 / mo</span>
+                <span className="location"><i className="fa fa-map-marker"></i>Oakville,MO</span>
+              </div>
             </div>
           </div>
         </section>
+
 
         <section className="pagination">
           <ul className="pagination-numbers">
@@ -71,6 +155,8 @@ function Listings() {
         </section>
 
       </section>
+
+
   );
 }
 
