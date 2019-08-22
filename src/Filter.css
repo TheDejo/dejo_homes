@@ -6,7 +6,8 @@
     offwhite:#FEFDF6 */
 #filter {
   /* background: #FEFDF6; */
-  background: #FAFAFA;
+  /* background: #FFFEF8; */
+  background: #216699;
   width: 25%;
   max-width: 300px;
   display: inline-block;
@@ -18,14 +19,14 @@
 h1 {
   margin-bottom: 25px;
   text-transform: uppercase;
-  color:#216699;
+  color:white;
   text-align: center;
-  border-bottom: 1px solid #1F2732;
+  border-bottom: 1px solid lightgrey;
   padding-bottom: 10px;
 
 }
 select {
-  background: transparent;
+  /* background: transparent; */
   padding: 10px;
   font-size: 13px;
   font-weight: 300;
@@ -40,6 +41,7 @@ select:focus {
   display: block;
   margin-bottom: 6px;
   font-weight: 500;
+  color: white;
 }
 input:focus {
   outline: none;
@@ -62,6 +64,7 @@ input[placeholder] {
   display: block;
   font-weight: 300;
   font-size: 13px;
+  color: white;
   width: 100%;
   padding: 13px 0;
 }
