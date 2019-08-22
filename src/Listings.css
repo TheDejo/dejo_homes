@@ -87,9 +87,9 @@
 .list-results .list {
   background: white;
   border-radius: 5px;
-  -webkit-box-shadow: 9px 9px 9px -6px rgba(179,179,179,1);
-  -moz-box-shadow: 9px 9px 9px -6px rgba(179,179,179,1);
-  box-shadow: 9px 9px 9px -6px rgba(179,179,179,1);
+  -webkit-box-shadow: 0px 9px 13px 0px rgba(179,179,179,1);
+  -moz-box-shadow: 0px 13px 9px 0px rgba(179,179,179,1);
+  box-shadow: 0px 9px 13px 0px rgba(179,179,179,1);
 }
 .list-img {
   background: url(https://i.pinimg.com/originals/de/ef/7a/deef7a9070f5de8c52ff5f4f4aec1e79.png) no-repeat center center;
@@ -149,8 +149,8 @@
 .user-details {
   vertical-align: top;
   display: inline-block;
-  /* width: 70%;
-  margin-left: 20px; */
+  /* width: 70%;*/
+  margin-left: 20px;
 }
 .user-name {
   color: white;
@@ -198,8 +198,27 @@
   padding-right: 10px
 }
 
-
-
+#pagination {
+  text-align: center;
+}
+#pagination .pages {
+  display: inline-block;
+  -webkit-box-shadow: 0px 9px 13px 0px rgba(179,179,179,1);
+  -moz-box-shadow: 0px 13px 9px 0px rgba(179,179,179,1);
+  box-shadow: 0px 9px 13px 0px rgba(179,179,179,1);
+}
+#pagination .pages li {
+  display: inline-block;
+  padding: 20px 30px;
+}
+#pagination .pages li:hover {
+  cursor: pointer;
+  color: white;
+  background: lightgrey;
+}
+#pagination .pages .active {
+  border-bottom: 3px solid #DB3977;
+}
 ul {
   list-style-type: none;
 }
