@@ -1,6 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-function Filter() {
+class Filter extends Component {
+  constructor () {
+    super()
+    this.state = {
+      name: 'Adam',
+    }
+  }
+// function Filter() {
+render () {
   return (
     <section id="filter">
       <div className="inside">
@@ -48,5 +57,6 @@ function Filter() {
     </section>
   );
 }
-
+}
 export default Filter;
+
