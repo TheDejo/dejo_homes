@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-
-function Header() {
+class Header extends Component {
+  constructor () {
+    super()
+    this.state = {
+      name: 'Adam',
+    }
+  }
+// function Header() {
+render () {
   return (
       <header>
         <div className="logo"><span className="home">HOME</span>ble</div>
@@ -13,5 +21,7 @@ function Header() {
       </header>
   );
 }
+}
 
 export default Header;
+
