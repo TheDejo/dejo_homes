@@ -1,7 +1,59 @@
-import React from 'react';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-function Listings() {
-  return (
+class Listings extends Component {
+  constructor () {
+    super()
+    this.state = {
+      name: 'Adam',
+    }
+    this.loopListings = this.loopListings.bind(this)
+  }
+loopListings () {
+  const {listingsData} = this.props
+
+  return listingsData.map ((listing, index) => {
+    return (<div className="col" key={index}>
+      <div className="list">
+        <div className="list-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
+          <span className="address">{listing.address}</span>
+          <div className="details">
+            <div className="col">
+              <div className="user-img"></div>
+            </div>
+            <div className='col-2'>
+              <div className="user-details">
+                <span className="user-name">Marcus Aurelius</span>
+                <span className="post-date">08/10/2019</span>
+              </div>
+              <div className="list-details">
+                <div className="floor-space">
+                  <i className="fa fa-home"></i>
+                  <span>{listing.floorSpace} ft&sup2;</span>
+                </div>
+                <div className="bedrooms">
+                  <i className="fa fa-bed"></i>
+                  <span>{listing.rooms} br</span>
+                </div>
+                <div className="baths">
+                  <i className="fa fa-bath"></i>
+                  <span>{listing.bath} ba</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bottom-info">
+          <span className="price">${listing.price}</span>
+          <span className="location"><i className="fa fa-map-marker"></i>{listing.city},{listing.state}</span>
+        </div>
+      </div>
+    </div>)
+  })
+}
+// function Listings() {
+render () {
+    return (
       <section id="listings">
         <section className="search-area">
           <div className="close-button">
@@ -27,126 +79,16 @@ function Listings() {
         </section>
 
         <section className="list-results">
-          <div className="col">
-            <div className="list">
-              <div className="list-img">
-                <span className="address">5777 Stoic Ln.</span>
-                <div className="details">
-                  <div className="col">
-                    <div className="user-img"></div>
-                  </div>
 
-                  <div className='col-2'>
-                    <div className="user-details">
-                      <span className="user-name">Marcus Aurelius</span>
-                      <span className="post-date">08/10/2019</span>
-                    </div>
-                    <div className="list-details">
-                      <div className="floor-space">
-                        <i className="fa fa-home"></i>
-                        <span>2500 ft&sup2;</span>
-                      </div>
-                      <div className="bedrooms">
-                        <i className="fa fa-bed"></i>
-                        <span>3 br</span>
-                      </div>
-                      <div className="baths">
-                        <i className="fa fa-bath"></i>
-                        <span>2 ba</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bottom-info">
-                <span className="price">$1450 / mo</span>
-                <span className="location"><i className="fa fa-map-marker"></i>Oakville,MO</span>
-              </div>
-            </div>
-          </div>
+          {this.loopListings()}
 
-          <div className="col">
-            <div className="list">
-              <div className="list-img">
-                <span className="address">5777 Stoic Ln.</span>
-                <div className="details">
-                  <div className="col">
-                    <div className="user-img"></div>
-                  </div>
-
-                  <div className='col-2'>
-                    <div className="user-details">
-                      <span className="user-name">Marcus Aurelius</span>
-                      <span className="post-date">08/10/2019</span>
-                    </div>
-                    <div className="list-details">
-                      <div className="floor-space">
-                        <i className="fa fa-home"></i>
-                        <span>2500 ft&sup2;</span>
-                      </div>
-                      <div className="bedrooms">
-                        <i className="fa fa-bed"></i>
-                        <span>3 br</span>
-                      </div>
-                      <div className="baths">
-                        <i className="fa fa-bath"></i>
-                        <span>2 ba</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bottom-info">
-                <span className="price">$1450 / mo</span>
-                <span className="location"><i className="fa fa-map-marker"></i>Oakville,MO</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="col">
-            <div className="list">
-              <div className="list-img">
-                <span className="address">5777 Stoic Ln.</span>
-                <div className="details">
-                  <div className="col">
-                    <div className="user-img"></div>
-                  </div>
-
-                  <div className='col-2'>
-                    <div className="user-details">
-                      <span className="user-name">Marcus Aurelius</span>
-                      <span className="post-date">08/10/2019</span>
-                    </div>
-                    <div className="list-details">
-                      <div className="floor-space">
-                        <i className="fa fa-home"></i>
-                        <span>2500 ft&sup2;</span>
-                      </div>
-                      <div className="bedrooms">
-                        <i className="fa fa-bed"></i>
-                        <span>3 br</span>
-                      </div>
-                      <div className="baths">
-                        <i className="fa fa-bath"></i>
-                        <span>2 ba</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bottom-info">
-                <span className="price">$1450 / mo</span>
-                <span className="location"><i className="fa fa-map-marker"></i>Oakville,MO</span>
-              </div>
-            </div>
-          </div>
         </section>
 
 
-        <section className="pagination">
-          <ul className="pagination-numbers">
+        <section id="pagination">
+          <ul className="pages">
             <li>Prev</li>
-            <li>1</li>
+            <li className="active">1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>
@@ -155,9 +97,8 @@ function Listings() {
         </section>
 
       </section>
-
-
   );
+}
 }
 
 export default Listings;
