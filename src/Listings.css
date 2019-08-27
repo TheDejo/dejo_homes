@@ -93,10 +93,10 @@
 }
 .list-img {
   background: url(https://i.pinimg.com/originals/de/ef/7a/deef7a9070f5de8c52ff5f4f4aec1e79.png) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
   min-height:200px;
   padding: 15px;
   color: white;
@@ -189,7 +189,7 @@
   color: grey;
 }
 .location {
-  font-size: 20px;
+  font-size: 16px;
   display: block;
   color: grey;
 }
@@ -215,6 +215,7 @@
   cursor: pointer;
   color: white;
   background: lightgrey;
+  transition: .2s ease-in-out;
 }
 #pagination .pages .active {
   border-bottom: 3px solid #DB3977;
