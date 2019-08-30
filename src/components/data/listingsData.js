@@ -11,7 +11,7 @@ var listingsData = [
       'finished basement',
       'two car garage'
     ],
-    houseType:'two story',
+    houseType:'Two Story',
     image: 'https://www.houseopedia.com/wp-content/uploads/2017/03/AdobeStock_112041533-e1489428614840.jpeg'
   },
   {
@@ -27,7 +27,7 @@ var listingsData = [
       'two car garage',
       'pool'
     ],
-    houseType:'single story',
+    houseType:'Single Story',
     image: 'https://i.pinimg.com/originals/dc/89/bf/dc89bf25763e07fac8477534b3fe300c.jpg'
   },
   {
@@ -41,7 +41,7 @@ var listingsData = [
     extras:[
       'finished basement',
     ],
-    houseType:'single story',
+    houseType:'Single Story',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTngfDVgOMO5vDTejvzVTWdTDsP4khst8-TM4FEDPm0aMHQI5Qvsg'
   },
   {
@@ -57,7 +57,7 @@ var listingsData = [
       'two car garage',
       'pool'
     ],
-    houseType:'two story',
+    houseType:'Two Story',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdBggUKxFndfmWgFDdDJmO1EMi8f8PgpbGCQ1hNQ-QyHCT7Oktdw'
   },
   {
@@ -71,7 +71,7 @@ var listingsData = [
     extras:[
       'two car garage'
     ],
-    houseType:'two story',
+    houseType:'Two Story',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAUVN1dNUXLpwybly83GuUpc-6l_NHRLbGgWecoJXfHycA40aalQ'
   }
 ]
