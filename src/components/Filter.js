@@ -8,31 +8,32 @@ class Filter extends Component {
       name: 'Adam',
     }
   }
-// function Filter() {
+
 render () {
   return (
     <section id="filter">
       <div className="inside">
           <h1>Filters</h1>
         <select name="neighborhood" className="filter-neighborhood" onChange={this.props.change}>
+          <option value='All'>All</option>
           <option value='Oakville'>Oakville</option>
           <option value='Kirkwood'>Kirkwood</option>
         </select>
-        <select name="housetype" className="filter-housetype" onChange={this.props.change}>
+        <select name="houseType" className="filter-houseType" onChange={this.props.change}>
           <option value='Single Story'>Single Story</option>
           <option value='Two Story'>Two Story</option>
         </select>
         <select name="rooms" className=" filter-rooms" onChange={this.props.change}>
-          <option value='1'>1 br</option>
-          <option value='2'>2 br</option>
-          <option value='3'>3 br</option>
-          <option value='4'>4 br</option>
+          <option value='1'>1+ br</option>
+          <option value='2'>2+ br</option>
+          <option value='3'>3+ br</option>
+          <option value='4'>4+ br</option>
         </select>
         <select name="baths" className="filter-baths" onChange={this.props.change}>
-          <option value='1'>1 ba</option>
-          <option value='2'>2 ba</option>
-          <option value='3'>3 ba</option>
-          <option value='4'>4 ba</option>
+          <option value='1'>1+ ba</option>
+          <option value='2'>2+ ba</option>
+          <option value='3'>3+ ba</option>
+          <option value='4'>4+ ba</option>
         </select>
         <div className="filter-price">
           <span className="title">Price</span>
