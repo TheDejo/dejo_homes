@@ -13,22 +13,30 @@ render () {
   return (
     <section id="filter">
       <div className="inside">
-          <h1>Filters</h1>
+          <h1>Filter</h1>
+        <span className='title'>City</span>
         <select name="neighborhood" className="filter-neighborhood" onChange={this.props.change}>
           <option value='All'>All</option>
           <option value='Oakville'>Oakville</option>
           <option value='Kirkwood'>Kirkwood</option>
+          <option value='Clayton'>Clayton</option>
+          <option value='Ladue'>Ladue</option>
+          <option value='Chesterfield'>Chesterfield</option>
         </select>
+        <span className='title'>Type</span>
         <select name="houseType" className="filter-houseType" onChange={this.props.change}>
+          <option value='All'>All</option>
           <option value='Single Story'>Single Story</option>
           <option value='Two Story'>Two Story</option>
         </select>
-        <select name="rooms" className=" filter-rooms" onChange={this.props.change}>
+        <span className='title'>Bedrooms</span>
+        <select name="bedrooms" className=" filter-rooms" onChange={this.props.change}>
           <option value='1'>1+ br</option>
           <option value='2'>2+ br</option>
           <option value='3'>3+ br</option>
           <option value='4'>4+ br</option>
         </select>
+        <span className='title'>Baths</span>
         <select name="baths" className="filter-baths" onChange={this.props.change}>
           <option value='1'>1+ ba</option>
           <option value='2'>2+ ba</option>
