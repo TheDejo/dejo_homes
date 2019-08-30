@@ -12,6 +12,10 @@ class Listings extends Component {
 loopListings () {
   const {listingsData} = this.props
 
+  if(listingsData == undefined || listingsData.length == 0) {
+    return "No results found"
+  }
+
   return listingsData.map ((listing, index) => {
     return (<div className="col" key={index}>
       <div className="list">
