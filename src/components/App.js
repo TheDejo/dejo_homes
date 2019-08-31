@@ -1,118 +1,126 @@
-import React, {Component} from 'react';
-// import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Header from './Header.js';
+import Filter from './Filter.js';
+import Listings from './Listings.js';
+import '../App.css';
+import '../Header.css';
+import '../Filter.css';
+import '../Listings.css';
+import listingsData from "./data/listingsData.js";
 
-class Filter extends Component {
+class App extends Component {
   constructor () {
     super()
     this.state = {
       name: 'Adam',
+      listingsData,
+      neighborhood: 'All',
+      houseType: 'All',
+      bedrooms: 1,
+      baths: 1,
+      min_price: 0,
+      max_price: 3000000,
+      min_square_feet: 0,
+      max_square_feet:10000,
+      pool:false,
+      finished_basement:false,
+      two_car_garage:false,
+      filteredData: listingsData,
+      populateFormsData: ""
     }
-    this.neighborhoods = this.neighborhoods.bind(this)
-    this.houseTypes = this.houseTypes.bind(this)
-    this.beds = this.beds.bind(this)
-    this.bath = this.bath.bind(this)
+    this.change = this.change.bind(this)
+    this.filteredData = this.filteredData.bind(this)
+    this.populateForms = this.populateForms.bind(this)
   }
-  componentWillMount() {
-    this.props.populateAction()
+  change(event) {
+    var name = event.target.name;
+    var value = (event.target.type === "checkbox") ? event.target.checked :event.target.value;
+
+    this.setState ({
+      [name]:value
+    }, () => {
+      console.log(this.state);
+      this.filteredData()
+    })
   }
-  neighborhoods() {
-    if(this.props.globalState.populateFormsData.neighborhoods !== undefined) {
-      var {neighborhoods} = this.props.globalState.populateFormsData
-      console.log(neighborhoods);
-      return neighborhoods.map((item) => {
-        return (
-          <option key={item} value={item}>{item}</option>
-        )
+
+  filteredData() {
+    var newData = this.state.listingsData.filter((item) => {
+      return item.price >= this.state.min_price
+          && item.price <= this.state.max_price
+          && item.floorSpace >= this.state.min_square_feet
+          && item.floorSpace <= this.state.max_square_feet
+          && item.rooms >= this.state.bedrooms
+          && item.bath >= this.state.baths
+    })
+    if (this.state.neighborhood !== 'All') {
+      newData = newData.filter((item) => {
+        return item.neighborhood === this.state.neighborhood
       })
     }
-  }
-  houseTypes() {
-    if(this.props.globalState.populateFormsData.houseTypes !== undefined) {
-      var {houseTypes} = this.props.globalState.populateFormsData
-      console.log(houseTypes);
-      return houseTypes.map((item) => {
-        return (
-          <option key={item} value={item}>{item}</option>
-        )
+    if (this.state.houseType !== 'All') {
+      newData = newData.filter((item) => {
+        return item.houseType === this.state.houseType
       })
     }
+    this.setState({
+      filteredData: newData
+    })
   }
-  beds() {
-    if(this.props.globalState.populateFormsData.beds !== undefined) {
-      var {beds} = this.props.globalState.populateFormsData
-      console.log(beds);
-      return beds.map((item) => {
-        return (
-          <option key={item} value={item}>{item}+ br</option>
-        )
-      })
-    }
-  }
-  bath() {
-    if(this.props.globalState.populateFormsData.bath !== undefined) {
-      var {bath} = this.props.globalState.populateFormsData
-      console.log(bath);
-      return bath.map((item) => {
-        return (
-          <option key={item} value={item}>{item}+ ba</option>
-        )
-      })
-    }
+  populateForms() {
+    // neighborhood
+    var neighborhoods = this.state.listingsData.map((item) => {
+      return item.neighborhood
+    })
+    neighborhoods = new Set(neighborhoods)
+    neighborhoods = [...neighborhoods]
+
+    // houseType
+    var houseTypes = this.state.listingsData.map((item) => {
+      return item.houseType
+    })
+    houseTypes = new Set(houseTypes)
+    houseTypes = [...houseTypes]
+
+    // rooms
+    var beds = this.state.listingsData.map((item) => {
+      return item.rooms
+    })
+    beds = new Set(beds)
+    beds = [...beds]
+
+    // baths
+    var bath = this.state.listingsData.map((item) => {
+      return item.rooms
+    })
+    bath = new Set(bath)
+    bath = [...bath]
+
+    this.setState ({
+      populateFormsData: {
+        neighborhoods,
+        houseTypes,
+        beds,
+        bath
+      },
+    },() => {
+        console.log(this.state);
+    })
   }
 
 render () {
   return (
-    <section id="filter">
-      <div className="inside">
-          <h1>Filter</h1>
-        <span className='title'>City</span>
-        <select name="neighborhood" className="filter-neighborhood" onChange={this.props.change}>
-          <option value='All'>All</option>
-            {this.neighborhoods()}
-        </select>
-        <span className='title'>Type</span>
-        <select name="houseType" className="filter-houseType" onChange={this.props.change}>
-          <option value='All'>All</option>
-          {this.houseTypes()}
-        </select>
-        <span className='title'>Bedrooms</span>
-        <select name="bedrooms" className=" filter-rooms" onChange={this.props.change}>
-          {this.beds()}
-        </select>
-        <span className='title'>Baths</span>
-        <select name="baths" className="filter-baths" onChange={this.props.change}>
-          {this.bath()}
-        </select>
-        <div className="filter-price">
-          <span className="title">Price</span>
-            <input type="text" name="min_price" className="min-price" placeholder="min price" value={this.props.globalState.min_price} onChange={this.props.change}/>
-            <input type="text" name="max_price" className="max-price" placeholder="max price" value={this.props.globalState.max_price} onChange={this.props.change}/>
-        </div>
-        <div className="filter-square-feet">
-          <span className="title">Square Feet</span>
-            <input type="text" name="min_square_feet" className="min-square-feet" placeholder="min sqft" value={this.props.globalState.min_square_feet} onChange={this.props.change}/>
-            <input type="text" name="max_square_feet" className="max-square-feet" placeholder="max sqft" value={this.props.globalState.max_square_feet} onChange={this.props.change}/>
-        </div>
-        <div id="bottom-filters" className="filter-extras">
-          <span className="title">
-            Extras
-          </span>
-          <label htmlFor="extras">
-            <span>Pool</span>
-            <input name="pool" value="pool" type="checkbox" onChange={this.props.change}/>
-          </label>
-          <label htmlFor="extras">
-            <span>Finished Basement</span>
-            <input name="finished_basement" value="finished_basement" type="checkbox" onChange={this.props.change}/>
-          </label>
-          <label htmlFor="extras">
-            <span>Two Car Garage</span>
-            <input name="two_car_garage" value="two_car_garage" type="checkbox" onChange={this.props.change}/>
-          </label>
-        </div>
-      </div>
-    </section>
+    <div>
+      <Header/>
+      <section id='content-area'>
+        <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
+        <Listings listingsData={this.state.filteredData}/>
+      </section>
+    </div>
   );
 }
 }
-export default Filter;
+export default App;
+const root = document.getElementById('root');
+ReactDOM.render(<App />,root);
