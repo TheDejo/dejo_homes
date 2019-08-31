@@ -1,5 +1,21 @@
 var listingsData = [
   {
+    address: "4 Analect Pl.",
+    neighborhood: 'Chesterfield',
+    state: 'MO',
+    rooms: 4,
+    bath: 3,
+    price: 645000,
+    floorSpace: 3400,
+    extras:[
+      'finished basement',
+      'two car garage',
+      'pool'
+    ],
+    houseType:'Single Story',
+    image: 'https://freshome.com/wp-content/uploads/2015/03/exterior-landscape-one-story-home.jpg'
+  },
+  {
     address: "25 Parkway Dr.",
     neighborhood: 'Clayton',
     state: 'MO',
@@ -29,6 +45,20 @@ var listingsData = [
     ],
     houseType:'Single Story',
     image: 'https://i.pinimg.com/originals/dc/89/bf/dc89bf25763e07fac8477534b3fe300c.jpg'
+  },
+  {
+  address: "200 Franklin Ave.",
+  neighborhood: "Ladue",
+  state: 'MO',
+  rooms: 3,
+  bath: 1,
+  price: 310000,
+  floorSpace:2000,
+  extras: [
+    'pool'
+  ],
+  houseType:'Apartment',
+  image: 'https://cdngeneral.rentcafe.com/dmslivecafe/3/645705/The%20Kirkwood%20Twilights_049%20v2.JPG?crop=(10.47619047619122,10,300,200)&cropxunits=300&cropyunits=200&quality=85&scale=both&'
   },
   {
     address: "10 Huntsport Rd.",
@@ -61,6 +91,20 @@ var listingsData = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdBggUKxFndfmWgFDdDJmO1EMi8f8PgpbGCQ1hNQ-QyHCT7Oktdw'
   },
   {
+    address: "2628 Vinci St.",
+    neighborhood: "Clayton",
+    state: 'MO',
+    rooms: 2,
+    bath: 1,
+    price: 220000,
+    floorSpace:1700,
+    extras: [
+      'pool'
+    ],
+    houseType:'Apartment',
+    image: 'https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/4011-1/moda-apartments-exterior.jpg'
+  },
+  {
     address: "321 Osiris St.",
     neighborhood: 'Ladue',
     state: 'MO',
@@ -77,3 +121,4 @@ var listingsData = [
 ]
 
 export default listingsData;
+
