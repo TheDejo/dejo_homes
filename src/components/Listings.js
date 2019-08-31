@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 class Listings extends Component {
   constructor () {
@@ -12,7 +12,7 @@ class Listings extends Component {
 loopListings () {
   const {listingsData} = this.props
 
-  if(listingsData == undefined || listingsData.length == 0) {
+  if(listingsData === undefined || listingsData.length === 0) {
     return "No results found"
   }
 
@@ -27,7 +27,7 @@ loopListings () {
             </div>
             <div className='col-2'>
               <div className="user-details">
-                <span className="user-name">Marcus Aurelius</span>
+                <span className="user-name">Mark Aurelius</span>
                 <span className="post-date">08/10/2019</span>
               </div>
               <div className="list-details">
@@ -49,7 +49,7 @@ loopListings () {
         </div>
         <div className="bottom-info">
           <span className="price">${listing.price}</span>
-          <span className="location"><i className="fa fa-map-marker"></i>{listing.city},{listing.state}</span>
+          <span className="location"><i className="fa fa-map-marker"></i>{listing.neighborhood},{listing.state}</span>
         </div>
       </div>
     </div>)
