@@ -71,9 +71,9 @@ render () {
             390 results found
           </div>
           <div className="sort-options">
-            <select name="sort-by" className="sort-by">
+            <select name="sort_by" className="sort_by" onChange={this.props.change}>
+              <option value="price-descending">Lowest Price</option>
               <option value="price-ascending">Highest Price</option>
-              <option value="price-ascending">Lowest Price</option>
             </select>
             <div className="view">
               <i className="fa fa-list-ul"></i>
