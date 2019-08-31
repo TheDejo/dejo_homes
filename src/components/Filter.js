@@ -1,11 +1,62 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 class Filter extends Component {
   constructor () {
     super()
     this.state = {
       name: 'Adam',
+    }
+    this.neighborhoods = this.neighborhoods.bind(this)
+    this.houseTypes = this.houseTypes.bind(this)
+    this.beds = this.beds.bind(this)
+    this.bath = this.bath.bind(this)
+  }
+  componentWillMount() {
+    this.props.populateAction()
+  }
+  neighborhoods() {
+    if(this.props.globalState.populateFormsData.neighborhoods !== undefined) {
+      var {neighborhoods} = this.props.globalState.populateFormsData
+      console.log(neighborhoods);
+      return neighborhoods.map((item) => {
+        return (
+          <option key={item} value={item}>{item}</option>
+        )
+      })
+    }
+  }
+  houseTypes() {
+    if(this.props.globalState.populateFormsData.houseTypes !== undefined) {
+      var {houseTypes} = this.props.globalState.populateFormsData
+      console.log(houseTypes);
+      return houseTypes.map((item) => {
+        return (
+          <option key={item} value={item}>{item}</option>
+        )
+      })
+    }
+  }
+  beds() {
+    if(this.props.globalState.populateFormsData.beds !== undefined) {
+      var {beds} = this.props.globalState.populateFormsData
+      console.log(beds);
+      return beds.map((item) => {
+        return (
+          <option key={item} value={item}>{item}+ br</option>
+        )
+      })
+    }
+  }
+  bath() {
+    if(this.props.globalState.populateFormsData.bath !== undefined) {
+      var {bath} = this.props.globalState.populateFormsData
+      console.log(bath);
+      return bath.map((item) => {
+        return (
+          <option key={item} value={item}>{item}+ ba</option>
+        )
+      })
     }
   }
 
@@ -17,31 +68,20 @@ render () {
         <span className='title'>City</span>
         <select name="neighborhood" className="filter-neighborhood" onChange={this.props.change}>
           <option value='All'>All</option>
-          <option value='Oakville'>Oakville</option>
-          <option value='Kirkwood'>Kirkwood</option>
-          <option value='Clayton'>Clayton</option>
-          <option value='Ladue'>Ladue</option>
-          <option value='Chesterfield'>Chesterfield</option>
+            {this.neighborhoods()}
         </select>
         <span className='title'>Type</span>
         <select name="houseType" className="filter-houseType" onChange={this.props.change}>
           <option value='All'>All</option>
-          <option value='Single Story'>Single Story</option>
-          <option value='Two Story'>Two Story</option>
+          {this.houseTypes()}
         </select>
         <span className='title'>Bedrooms</span>
         <select name="bedrooms" className=" filter-rooms" onChange={this.props.change}>
-          <option value='1'>1+ br</option>
-          <option value='2'>2+ br</option>
-          <option value='3'>3+ br</option>
-          <option value='4'>4+ br</option>
+          {this.beds()}
         </select>
         <span className='title'>Baths</span>
         <select name="baths" className="filter-baths" onChange={this.props.change}>
-          <option value='1'>1+ ba</option>
-          <option value='2'>2+ ba</option>
-          <option value='3'>3+ ba</option>
-          <option value='4'>4+ ba</option>
+          {this.bath()}
         </select>
         <div className="filter-price">
           <span className="title">Price</span>
