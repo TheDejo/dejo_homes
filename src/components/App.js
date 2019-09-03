@@ -28,11 +28,13 @@ class App extends Component {
       two_car_garage:false,
       filteredData: listingsData,
       populateFormsData: "",
-      sort_by: 'Lowest Price'
+      sort_by: 'Lowest Price',
+      view: 'grid'
     }
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
+    this.changeView = this.changeView.bind(this)
   }
   componentWillMount() {
     var listingsData = this.state.listingsData.sort((a,b) => {
@@ -54,7 +56,11 @@ class App extends Component {
       this.filteredData()
     })
   }
-
+  changeView(viewName) {
+    this.setState ({
+      view: viewName
+    })
+  }
   filteredData() {
     var newData = this.state.listingsData.filter((item) => {
       return item.price >= this.state.min_price
@@ -74,12 +80,12 @@ class App extends Component {
         return item.houseType === this.state.houseType
       })
     }
-    if(this.state.sort_by == 'price-descending') {
+    if(this.state.sort_by === 'price-descending') {
       newData = newData.sort((a,b) => {
         return a.price - b.price
       })
     }
-    if(this.state.sort_by == 'price-ascending') {
+    if(this.state.sort_by === 'price-ascending') {
       newData = newData.sort((a,b) => {
         return b.price - a.price
       })
@@ -143,7 +149,7 @@ render () {
       <Header/>
       <section id='content-area'>
         <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
-        <Listings listingsData={this.state.filteredData} change={this.change}/>
+        <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView}/>
       </section>
     </div>
   );
