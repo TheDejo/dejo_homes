@@ -17,42 +17,82 @@ loopListings () {
   }
 
   return listingsData.map ((listing, index) => {
-    return (<div className="col" key={index}>
-      <div className="list">
-        <div className="list-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
-          <span className="address">{listing.address}</span>
-          <div className="details">
-            <div className="col">
-              <div className="user-img"></div>
-            </div>
-            <div className='col-2'>
-              <div className="user-details">
-                <span className="user-name">Mark Aurelius</span>
-                <span className="post-date">08/10/2019</span>
+    if (this.props.globalState.view === 'grid') { // grid view
+      return (<div className="col-md-3" key={index}>
+        <div className="list">
+          <div className="list-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
+            <span className="address">{listing.address}</span>
+            <div className="details">
+              <div className="col-md-3">
+                <div className="user-img"></div>
               </div>
-              <div className="list-details">
-                <div className="floor-space">
-                  <i className="fa fa-home"></i>
-                  <span>{listing.floorSpace} ft&sup2;</span>
+              <div className='col-md-9'>
+                <div className="user-details">
+                  <span className="user-name">Mark Aurelius</span>
+                  <span className="post-date">08/10/2019</span>
                 </div>
-                <div className="bedrooms">
-                  <i className="fa fa-bed"></i>
-                  <span>{listing.rooms} br</span>
-                </div>
-                <div className="baths">
-                  <i className="fa fa-bath"></i>
-                  <span>{listing.bath} ba</span>
+                <div className="list-details">
+                  <div className="floor-space">
+                    <i className="fa fa-home"></i>
+                    <span>{listing.floorSpace} ft&sup2;</span>
+                  </div>
+                  <div className="bedrooms">
+                    <i className="fa fa-bed"></i>
+                    <span>{listing.rooms} br</span>
+                  </div>
+                  <div className="baths">
+                    <i className="fa fa-bath"></i>
+                    <span>{listing.bath} ba</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="bottom-info">
+            <span className="price">${listing.price}</span>
+            <span className="location"><i className="fa fa-map-marker"></i>{listing.neighborhood},{listing.state}</span>
+          </div>
         </div>
-        <div className="bottom-info">
-          <span className="price">${listing.price}</span>
-          <span className="location"><i className="fa fa-map-marker"></i>{listing.neighborhood},{listing.state}</span>
+      </div>)
+    } else { // horizontal view
+      return (<div className="col-md-12 col-lg-6" key={index}>
+        <div className="list">
+          <div className="list-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
+            <span className="address">{listing.address}</span>
+            <div className="details">
+              <div className="col-md-3">
+                <div className="user-img"></div>
+              </div>
+              <div className='col-md-9'>
+                <div className="user-details">
+                  <span className="user-name">Mark Aurelius</span>
+                  <span className="post-date">08/10/2019</span>
+                </div>
+                <div className="list-details">
+                  <div className="floor-space">
+                    <i className="fa fa-home"></i>
+                    <span>{listing.floorSpace} ft&sup2;</span>
+                  </div>
+                  <div className="bedrooms">
+                    <i className="fa fa-bed"></i>
+                    <span>{listing.rooms} br</span>
+                  </div>
+                  <div className="baths">
+                    <i className="fa fa-bath"></i>
+                    <span>{listing.bath} ba</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bottom-info">
+            <span className="price">${listing.price}</span>
+            <span className="location"><i className="fa fa-map-marker"></i>{listing.neighborhood},{listing.state}</span>
+          </div>
         </div>
-      </div>
-    </div>)
+      </div>)
+    }
+
   })
 }
 // function Listings() {
@@ -76,8 +116,8 @@ render () {
               <option value="price-ascending">Highest Price</option>
             </select>
             <div className="view">
-              <i className="fa fa-list-ul"></i>
-              <i className="fa fa-th"></i>
+              <i className="fa fa-list-ul" onClick={this.props.changeView.bind(null,'box')}></i>
+              <i className="fa fa-th" onClick={this.props.changeView.bind(null,'grid')}></i>
             </div>
           </div>
         </section>
