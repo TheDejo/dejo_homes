@@ -7,11 +7,9 @@ var listingsData = [
     bath: 3,
     price: 645000,
     floorSpace: 3400,
-    extras:[
-      'finished basement',
-      'two car garage',
-      'pool'
-    ],
+    pool: true,
+    finished_basement:true,
+    two_car_garage:true,
     houseType:'Single Story',
     image: 'https://freshome.com/wp-content/uploads/2015/03/exterior-landscape-one-story-home.jpg'
   },
@@ -23,10 +21,8 @@ var listingsData = [
     bath: 2,
     price: 565000,
     floorSpace: 3200,
-    extras:[
-      'finished basement',
-      'two car garage'
-    ],
+    finished_basement:true,
+    two_car_garage:true,
     houseType:'Two Story',
     image: 'https://www.houseopedia.com/wp-content/uploads/2017/03/AdobeStock_112041533-e1489428614840.jpeg'
   },
@@ -38,11 +34,8 @@ var listingsData = [
     bath: 2,
     price: 375000,
     floorSpace: 2600,
-    extras:[
-      'finished basement',
-      'two car garage',
-      'pool'
-    ],
+    pool: true,
+    finished_basement:true,
     houseType:'Single Story',
     image: 'https://i.pinimg.com/originals/dc/89/bf/dc89bf25763e07fac8477534b3fe300c.jpg'
   },
@@ -54,9 +47,7 @@ var listingsData = [
   bath: 1,
   price: 310000,
   floorSpace:2000,
-  extras: [
-    'pool'
-  ],
+  pool: true,
   houseType:'Apartment',
   image: 'https://cdngeneral.rentcafe.com/dmslivecafe/3/645705/The%20Kirkwood%20Twilights_049%20v2.JPG?crop=(10.47619047619122,10,300,200)&cropxunits=300&cropyunits=200&quality=85&scale=both&'
   },
@@ -68,9 +59,7 @@ var listingsData = [
     bath: 1,
     price: 175000,
     floorSpace: 2100,
-    extras:[
-      'finished basement',
-    ],
+    finished_basement:true,
     houseType:'Single Story',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTngfDVgOMO5vDTejvzVTWdTDsP4khst8-TM4FEDPm0aMHQI5Qvsg'
   },
@@ -82,11 +71,9 @@ var listingsData = [
     bath: 2.5,
     price: 750000,
     floorSpace: 3900,
-    extras:[
-      'finished basement',
-      'two car garage',
-      'pool'
-    ],
+    finished_basement:true,
+    pool:true,
+    two_car_garage:true,
     houseType:'Two Story',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdBggUKxFndfmWgFDdDJmO1EMi8f8PgpbGCQ1hNQ-QyHCT7Oktdw'
   },
@@ -98,9 +85,7 @@ var listingsData = [
     bath: 1,
     price: 220000,
     floorSpace:1700,
-    extras: [
-      'pool'
-    ],
+    pool:true,
     houseType:'Apartment',
     image: 'https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/4011-1/moda-apartments-exterior.jpg'
   },
@@ -112,9 +97,7 @@ var listingsData = [
     bath: 3,
     price: 435000,
     floorSpace: 3350,
-    extras:[
-      'two car garage'
-    ],
+    two_car_garage:true,
     houseType:'Two Story',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAUVN1dNUXLpwybly83GuUpc-6l_NHRLbGgWecoJXfHycA40aalQ'
   }
