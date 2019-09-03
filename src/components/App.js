@@ -71,16 +71,19 @@ class App extends Component {
           && item.rooms >= this.state.bedrooms
           && item.bath >= this.state.baths
     })
+    // NEIGHBORHOOD FILTER
     if (this.state.neighborhood !== 'All') {
       newData = newData.filter((item) => {
         return item.neighborhood === this.state.neighborhood
       })
     }
+    // HOUSE TYPE FILTER
     if (this.state.houseType !== 'All') {
       newData = newData.filter((item) => {
         return item.houseType === this.state.houseType
       })
     }
+    // PRICE FILTER
     if(this.state.sort_by === 'price-descending') {
       newData = newData.sort((a,b) => {
         return a.price - b.price
@@ -91,6 +94,7 @@ class App extends Component {
         return b.price - a.price
       })
     }
+    // SEARCH FILTER
     if (this.state.search !== "") {
       newData = newData.filter ((item) => {
         var neighborhood = item.neighborhood.toLowerCase()
@@ -100,7 +104,22 @@ class App extends Component {
         if(i !== null) {
           return true
         }
-
+      })
+    }
+    // FILTER EXTRAS
+    if (this.state.pool !== false) {
+      newData = newData.filter((item) => {
+        return item.pool === this.state.pool
+      })
+    }
+    if (this.state.finished_basement !== false) {
+      newData = newData.filter((item) => {
+        return item.finished_basement === this.state.finished_basement
+      })
+    }
+    if (this.state.two_car_garage !== false) {
+      newData = newData.filter((item) => {
+        return item.two_car_garage === this.state.two_car_garage
       })
     }
     this.setState({
