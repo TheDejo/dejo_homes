@@ -29,7 +29,8 @@ class App extends Component {
       filteredData: listingsData,
       populateFormsData: "",
       sort_by: 'Lowest Price',
-      view: 'grid'
+      view: 'grid',
+      search: ""
     }
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
@@ -88,6 +89,18 @@ class App extends Component {
     if(this.state.sort_by === 'price-ascending') {
       newData = newData.sort((a,b) => {
         return b.price - a.price
+      })
+    }
+    if (this.state.search !== "") {
+      newData = newData.filter ((item) => {
+        var neighborhood = item.neighborhood.toLowerCase()
+        var searchText = this.state.search.toLowerCase()
+        var i = neighborhood.match(searchText)
+
+        if(i !== null) {
+          return true
+        }
+
       })
     }
     this.setState({
