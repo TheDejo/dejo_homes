@@ -103,7 +103,7 @@ render () {
           <div className="close-button">
             <i className="fa fa-times"></i>
           </div>
-          <input type='text' name="search" placeholder="Search"/>
+          <input type='text' name="search" placeholder="Search" onChange={this.props.change}/>
         </section>
 
         <section className="sort">
