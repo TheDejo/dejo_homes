@@ -74,13 +74,19 @@
 .list-results {
   margin-bottom: 60px;
 }
-.col {
+.col-md-3 {
   width: 25%;
   display: inline-block;
   vertical-align: top;
   padding:0 15px;
 }
-.col-2 {
+.col-lg-6 {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 15px;
+}
+.col-md-9 {
   width: 75%;
   display: inline-block;
 }
