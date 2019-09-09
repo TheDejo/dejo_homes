@@ -60,26 +60,26 @@ loopListings () {
           <div className="list-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
             <span className="address">{listing.address}</span>
             <div className="details">
-              <div className="col-md-3">
-                <div className="user-img"></div>
+              <div className="col-md-3" style={{width:'40%',textAlign:'center',padding:'0px'}}>
+                <div className="user-img" style={{height:'70px',width:'70px'}}></div>
               </div>
-              <div className='col-md-9'>
-                <div className="user-details">
-                  <span className="user-name">Mark Aurelius</span>
-                  <span className="post-date">08/10/2019</span>
+              <div className='col-md-9' style={{fontSize:'24px',width:'60%'}}>
+                <div className="user-details" style={{marginLeft:'0px'}}>
+                  <span className="user-name" style={{fontSize:'20px'}}>Mark Aurelius</span>
+                  <span className="post-date" style={{fontSize:'20px'}}>08/10/2019</span>
                 </div>
                 <div className="list-details">
                   <div className="floor-space">
                     <i className="fa fa-home"></i>
-                    <span>{listing.floorSpace} ft&sup2;</span>
+                    <span style={{fontSize:'14px',textAlign:'center'}}>{listing.floorSpace} ft&sup2;</span>
                   </div>
                   <div className="bedrooms">
                     <i className="fa fa-bed"></i>
-                    <span>{listing.rooms} br</span>
+                    <span style={{fontSize:'14px',textAlign:'center'}}>{listing.rooms} br</span>
                   </div>
                   <div className="baths">
                     <i className="fa fa-bath"></i>
-                    <span>{listing.bath} ba</span>
+                    <span style={{fontSize:'14px',textAlign:'center'}}>{listing.bath} ba</span>
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@ render () {
 
         <section className="sort">
           <div className='main-results'>
-            390 results found
+            {this.props.globalState.filteredData.length} results found
           </div>
           <div className="sort-options">
             <select name="sort_by" className="sort_by" onChange={this.props.change}>
@@ -124,20 +124,21 @@ render () {
 
         <section className="list-results">
 
+        <div className='bottom-row'>
           {this.loopListings()}
-
+        </div>
         </section>
 
 
         <section id="pagination">
-          <ul className="pages">
-            <li>Prev</li>
-            <li className="active">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>Next</li>
-          </ul>
+            <ul className="pages">
+              <li>Prev</li>
+              <li className="active">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>Next</li>
+            </ul>
         </section>
 
       </section>
