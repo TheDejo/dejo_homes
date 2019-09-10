@@ -24,12 +24,12 @@ loopListings () {
             <span className="address">{listing.address}</span>
             <div className="details">
               <div className="col-md-3">
-                <div className="user-img"></div>
+                <div className="user-img" style={{background:`url("${listing.agentImg}") no-repeat center center`,backgroundSize:'cover'}}></div>
               </div>
               <div className='col-md-9'>
                 <div className="user-details">
-                  <span className="user-name">Mark Aurelius</span>
-                  <span className="post-date">08/10/2019</span>
+                  <span className="user-name">{listing.agent}</span>
+                  <span className="post-date">{listing.date}</span>
                 </div>
                 <div className="list-details">
                   <div className="floor-space">
@@ -61,12 +61,12 @@ loopListings () {
             <span className="address">{listing.address}</span>
             <div className="details">
               <div className="col-md-3" style={{width:'40%',textAlign:'center',padding:'0px'}}>
-                <div className="user-img" style={{height:'70px',width:'70px'}}></div>
+                <div className="user-img" style={{height:'70px',width:'70px',background:`url("${listing.agentImg}") no-repeat center center`,backgroundSize:'cover'}}></div>
               </div>
               <div className='col-md-9' style={{fontSize:'24px',width:'60%'}}>
                 <div className="user-details" style={{marginLeft:'0px'}}>
-                  <span className="user-name" style={{fontSize:'20px'}}>Mark Aurelius</span>
-                  <span className="post-date" style={{fontSize:'20px'}}>08/10/2019</span>
+                  <span className="user-name" style={{fontSize:'20px'}}>{listing.agent}</span>
+                  <span className="post-date" style={{fontSize:'20px'}}>{listing.date}</span>
                 </div>
                 <div className="list-details">
                   <div className="floor-space">
