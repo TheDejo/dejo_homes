@@ -2,6 +2,9 @@ var listingsData = [
   {
     address: "4 Analect Pl.",
     neighborhood: 'Chesterfield',
+    agent: 'David Confush',
+    agentImg: 'https://www.biography.com/.image/t_share/MTE5NDg0MDU0OTMwNjg3NTAz/confucius-9254926-2-402.jpg',
+    date: '6/20/2019',
     state: 'MO',
     rooms: 4,
     bath: 3,
@@ -16,6 +19,9 @@ var listingsData = [
   {
     address: "25 Parkway Dr.",
     neighborhood: 'Clayton',
+    agent: 'Ari Stotle',
+    agentImg: 'https://www.utoronto.ca/sites/default/files/media/2018-10-18-aristotle-resized.jpg',
+    date: '6/18/2019',
     state: 'MO',
     rooms: 4,
     bath: 2,
@@ -29,6 +35,9 @@ var listingsData = [
   {
     address: "983 Maxwell Pl",
     neighborhood: 'Kirkwood',
+    agent: 'Ted Rose',
+    agentImg: 'http://www.loc.gov/static/managed-content/uploads/sites/6/2018/10/Teddy-Roosevelt-Laughing-1910-e1539722671345.jpg',
+    date: '5/29/019',
     state: 'MO',
     rooms: 3,
     bath: 2,
@@ -42,6 +51,9 @@ var listingsData = [
   {
   address: "200 Franklin Ave.",
   neighborhood: "Ladue",
+  agent: 'Ben Frank',
+  agentImg: 'https://www.history.com/.image/t_share/MTU3ODc4NjAyNzI5Mzk5NjI1/istock_000015987445_large-2.jpg',
+  date: '7/4/2019',
   state: 'MO',
   rooms: 3,
   bath: 1,
@@ -54,6 +66,9 @@ var listingsData = [
   {
     address: "10 Huntsport Rd.",
     neighborhood: 'Oakville',
+    agent: 'Henry Thoreau',
+    agentImg: 'https://media.npr.org/assets/img/2013/04/22/3264616-henry-david-thoreau_custom-9ae367cce97607ec7c89076878a316c8b4c48b7c-s800-c85.jpg',
+    date: '8/30/2019',
     state: 'MO',
     rooms: 2,
     bath: 1,
@@ -61,14 +76,17 @@ var listingsData = [
     floorSpace: 2100,
     finished_basement:true,
     houseType:'Single Story',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTngfDVgOMO5vDTejvzVTWdTDsP4khst8-TM4FEDPm0aMHQI5Qvsg'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELWlv4pmZEl9NkHN3CxigerME2J0RrsX0OxgxWZhLGWKcn1weRA'
   },
   {
     address: "3690 Principle Ln.",
     neighborhood: 'Chesterfield',
+    agent: 'Nick Tesla',
+    agentImg: 'https://spectator.imgix.net/content/uploads/2018/06/Tesla.jpg?auto=compress,enhance,format&crop=faces,entropy,edges&fit=crop&w=820&h=550',
+    date: '9/1/2019',
     state: 'MO',
     rooms: 4,
-    bath: 2.5,
+    bath: 4,
     price: 750000,
     floorSpace: 3900,
     finished_basement:true,
@@ -80,8 +98,11 @@ var listingsData = [
   {
     address: "2628 Vinci St.",
     neighborhood: "Clayton",
+    agent: 'Leo Vinci',
+    agentImg: 'https://amp.businessinsider.com/images/5cae3e24d4206005f509a87a-750-562.jpg',
+    date: '6/14/2019',
     state: 'MO',
-    rooms: 2,
+    rooms: 1,
     bath: 1,
     price: 220000,
     floorSpace:1700,
@@ -90,8 +111,11 @@ var listingsData = [
     image: 'https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/4011-1/moda-apartments-exterior.jpg'
   },
   {
-    address: "321 Osiris St.",
+    address: "321 Existential St.",
     neighborhood: 'Ladue',
+    agent: 'Fred Nietzsche',
+    agentImg: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Nietzsche187a.jpg',
+    date: '7/25/2019',
     state: 'MO',
     rooms: 5,
     bath: 3,
