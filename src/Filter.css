@@ -4,17 +4,46 @@
     blue:#216699
     turqoise:#00BEA3
     offwhite:#FEFDF6 */
+
+/* new filter postioning */
 #filter {
   /* background: #FEFDF6; */
   /* background: #FFFEF8; */
   background: #216699;
-  width: 15%;
-  max-width: 300px;
-  display: inline-block;
+  /* width: 15%; */
+  width: 100%;
+  /* max-width: 300px; */
+  /* display: inline-block; */
+  /* float: left; */
+}
+.filter-options-1 {
+  width: 25%;
+  float: left;
+}
+.filter-city-type {
+float: left;
+width: 45%;
+}
+.filter-bed-bath {
+  width: 45%;
+  float: right;
+}
+.price-ft-filters {
+  width: 50%;
+  float: left;
+}
+.filter-price {
+  width: 30%;
+  float: left;
+  margin-left: 180px;
+}
+.filter-square-feet {
+  width: 30%;
   float: left;
 }
 .inside {
   padding: 20px;
+  height: 200px;
 }
 h1 {
   margin-bottom: 25px;
@@ -39,7 +68,7 @@ select:focus {
 }
 .title {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 20px;
   font-weight: 500;
   color: white;
 }
@@ -50,7 +79,7 @@ input[type="text"] {
   width: 60%;
   display: inline-block;
   margin-right: 5px;
-  margin-bottom: 6px;
+  margin-bottom: 20px;
   border-radius: 5px;
   padding: 5px;
 }
@@ -58,7 +87,11 @@ input[placeholder] {
   font-style: italic;
 }
 #bottom-filters {
-  padding-top: 25px;
+  width: 25%;
+  float: right;
+}
+.extras-wrapper {
+  margin-top: -16px;
 }
 #bottom-filters label{
   display: block;
@@ -66,7 +99,7 @@ input[placeholder] {
   font-size: 13px;
   color: white;
   width: 100%;
-  padding: 13px 0;
+  padding: 15px 0;
 }
 #bottom-filters input[type="checkbox"] {
   float: right;
