@@ -11,13 +11,15 @@
 }
 /* Top of Content Area */
 #listings {
-  width: 85%;
+  /* width: 85%; */
   padding: 15px;
-  float: left;
-  display: inline-block;
+  width: 100%;
+  /* float: left;
+  display: inline-block; */
 }
 .search-area  {
-  width: 65%;
+  width: 100%;
+  text-align: center;
   position: relative;
 }
 .search-area .fa {
@@ -29,16 +31,14 @@
   cursor: pointer;
 }
 .search-area input[type="text"] {
-  width: 100%;
+  width: 20%;
   background:transparent;
-  font-size: 13px;
+  font-size: 20px;
+  font-weight: 300;
   border: none;
   border-bottom: 1px solid lightgrey;
   margin-bottom: 20px;
   border-radius: 0px;
-}
-.search-area input[placeholder] {
-  padding-left: 40px;
 }
 .search-area input::placeholder {
   color: lightgrey;
@@ -147,7 +147,7 @@
   border-radius: 50%;
   border: 2px solid white;
   display: inline-block;
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpG3hmPmkULc3xnPStF267hBVpZgCY3TBFrPttSz5eoav-AaU74w) no-repeat center center;
+  background: url(https://media.npr.org/assets/img/2013/04/22/3264616-henry-david-thoreau_custom-9ae367cce97607ec7c89076878a316c8b4c48b7c-s800-c85.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
