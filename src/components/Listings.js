@@ -100,9 +100,6 @@ render () {
     return (
       <section id="listings">
         <section className="search-area">
-          <div className="close-button">
-            <i className="fa fa-times"></i>
-          </div>
           <input type='text' name="search" placeholder="Search" onChange={this.props.change}/>
         </section>
 
