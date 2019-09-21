@@ -10,11 +10,11 @@
   /* background: #FEFDF6; */
   /* background: #FFFEF8; */
   background: #216699;
-  /* width: 15%; */
-  width: 100%;
-  /* max-width: 300px; */
-  /* display: inline-block; */
-  /* float: left; */
+  width: 15%;
+  /* width: 100%; */
+  max-width: 300px;
+  display: inline-block;
+  float: left;
 }
 .filter-options-1 {
   width: 25%;
@@ -86,13 +86,6 @@ input[type="text"] {
 input[placeholder] {
   font-style: italic;
 }
-#bottom-filters {
-  width: 25%;
-  float: right;
-}
-.extras-wrapper {
-  margin-top: -16px;
-}
 #bottom-filters label{
   display: block;
   font-weight: 300;
@@ -104,4 +97,7 @@ input[placeholder] {
 #bottom-filters input[type="checkbox"] {
   float: right;
   font-size: 13px;
+}
+.extras-wrapper {
+  margin-top: -10px;
 }
