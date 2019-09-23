@@ -1,22 +1,14 @@
 header {
-  /* background: #1F2732; */
   background: white;
   width: 100%;
   overflow: auto;
-  padding: 20px 15px;
+  padding: 20px;
   border-bottom: 1px solid lightgrey;
 }
-header .button {
-  float:left;
-}
-header .button .fa {
-  font-size: 40px;
-  margin-top: 8px;
-}
 header .logo {
-  text-align: center;
+  float: left;
   color: #1F2732;
-  font-size: 45px;
+  font-size: 34px;
   font-family: 'Bad Script', cursive;
   margin: -14px 0 -30px 0;
 }
@@ -26,7 +18,6 @@ header .logo .home {
 }
 header nav {
   float: right;
-  margin-top: -45px;
   padding-top: 15px;
 }
 header a {
