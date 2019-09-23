@@ -5,45 +5,29 @@
     turqoise:#00BEA3
     offwhite:#FEFDF6 */
 
-/* new filter postioning */
 #filter {
-  /* background: #FEFDF6; */
-  /* background: #FFFEF8; */
-  background: #216699;
   width: 15%;
-  /* width: 100%; */
   max-width: 300px;
   display: inline-block;
   float: left;
 }
-.filter-options-1 {
-  width: 25%;
-  float: left;
+.filter-button {
+  background: white;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
 }
-.filter-city-type {
-float: left;
-width: 45%;
+.filter-button i {
+  color: #216699;
+  font-size: 28px;
 }
-.filter-bed-bath {
-  width: 45%;
-  float: right;
-}
-.price-ft-filters {
-  width: 50%;
-  float: left;
-}
-.filter-price {
-  width: 30%;
-  float: left;
-  margin-left: 180px;
-}
-.filter-square-feet {
-  width: 30%;
-  float: left;
+.filter-button i:hover {
+  cursor: pointer;
 }
 .inside {
   padding: 20px;
-  height: 200px;
+  background: #216699;
 }
 h1 {
   margin-bottom: 25px;
@@ -52,10 +36,8 @@ h1 {
   text-align: center;
   border-bottom: 1px solid lightgrey;
   padding-bottom: 10px;
-
 }
 select {
-  /* background: transparent; */
   padding: 10px;
   font-size: 13px;
   font-weight: 300;
@@ -68,8 +50,9 @@ select:focus {
 }
 .title {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 500;
+  font-size: 14px;
   color: white;
 }
 input:focus {
