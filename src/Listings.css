@@ -5,16 +5,104 @@
     turqoise:#00BEA3
     offwhite:#FEFDF6 */
 
+/* FILTER */
+#filter {
+  width: 15%;
+  max-width: 300px;
+  display: inline-block;
+  float: left;
+}
+
+.filter-button {
+  background: white;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
+}
+.filter-button i {
+  color: #216699;
+  font-size: 28px;
+}
+.filter-button i:hover {
+  cursor: pointer;
+}
+.inside {
+  padding: 20px;
+  background: #216699;
+}
+h1 {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color:white;
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+}
+select {
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+}
+select:focus {
+  outline: none;
+}
+.title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+input:focus {
+  outline: none;
+}
+input[type="text"] {
+  width: 48%;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 5px;
+}
+input[placeholder] {
+  font-style: italic;
+}
+#bottom-filters label{
+  display: block;
+  font-weight: 300;
+  font-size: 13px;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+}
+#bottom-filters input[type="checkbox"] {
+  float: right;
+  font-size: 13px;
+}
+.extras-wrapper {
+  margin-top: 0px;
+}
+
+/* LISTINGS */
 #content-area {
   overflow: auto;
   width: 100%;
 }
 /* Top of Content Area */
-#listings {
+/* #listings {
   width: 85%;
   padding: 10px;
   float: left;
   display: inline-block;
+} */
+#listings {
+  width: 85%;
+  padding: 10px;
+  float: right;
 }
 .search-area  {
   width: 50%;
