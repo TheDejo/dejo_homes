@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+iimport React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header.js';
-import Filter from './Filter.js';
+// import Filter from './Filter.js';
 import Listings from './Listings.js';
 import '../App.css';
 import '../Header.css';
-import '../Filter.css';
+// import '../Filter.css';
 import '../Listings.css';
 import listingsData from "./data/listingsData.js";
 
@@ -178,10 +178,9 @@ class App extends Component {
 render () {
   return (
     <div>
-      <Header/>
+      <Header listingsData={this.state.filteredData} change={this.change} globalState={this.state} populateAction={this.populateForms}/>
       <section id='content-area'>
-        <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
-        <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView}/>
+        <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} populateAction={this.populateForms} changeView={this.changeView}/>
       </section>
     </div>
   );
