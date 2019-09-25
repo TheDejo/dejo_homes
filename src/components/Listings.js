@@ -209,9 +209,7 @@ render () {
           <div className='main-results'>
             {this.props.globalState.filteredData.length} results found
           </div>
-          <section className="search-area">
-            <input type='text' name="search" placeholder="Search" onChange={this.props.change}/>
-          </section>
+          
           <div className="sort-options">
             <select name="sort_by" className="sort_by" onChange={this.props.change}>
               <option value="price-descending">Lowest Price</option>
