@@ -14,6 +14,9 @@ render () {
   return (
       <header>
         <div className="logo"><span className="home">HOME</span>ble</div>
+        <section className="search-area">
+          <input type='text' name="search" placeholder="Search" onChange={this.props.change}/>
+        </section>
         <nav>
           <a href="#">About</a>
           <a href="#">Login</a>
@@ -25,4 +28,3 @@ render () {
 }
 
 export default Header;
-
