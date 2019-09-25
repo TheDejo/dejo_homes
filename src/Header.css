@@ -4,6 +4,7 @@ header {
   overflow: auto;
   padding: 20px;
   border-bottom: 1px solid lightgrey;
+  position: fixed;
 }
 header .logo {
   float: left;
@@ -15,6 +16,25 @@ header .logo {
 header .logo .home {
     font-family: 'Bad Script', cursive;
     color: #DB3977;
+}
+.search-area  {
+  width: 50%;
+  float: left;
+  margin-bottom: -18px;
+}
+.search-area input[type="text"] {
+  width: 40%;
+  background:transparent;
+  font-size: 20px;
+  font-weight: 300;
+  float: right;
+  text-align: center;
+  border: none;
+  border-bottom: .1px solid lightgrey;
+  border-radius: 0px;
+}
+.search-area input::placeholder {
+  color: lightgrey;
 }
 header nav {
   float: right;
