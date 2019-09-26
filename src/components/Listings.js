@@ -181,7 +181,7 @@ render () {
             <input type="text" name="min_square_feet" className="min-square-feet" placeholder="min sqft" value={this.props.globalState.min_square_feet} onChange={this.props.change}/>
             <input type="text" name="max_square_feet" className="max-square-feet" placeholder="max sqft" value={this.props.globalState.max_square_feet} onChange={this.props.change}/>
           <div id="bottom-filters" className="filter-extras">
-            <span className="title">
+            <span className="extras-title">
               Extras
             </span>
             <div className='extras-wrapper'>
@@ -209,7 +209,7 @@ render () {
           <div className='main-results'>
             {this.props.globalState.filteredData.length} results found
           </div>
-          
+
           <div className="sort-options">
             <select name="sort_by" className="sort_by" onChange={this.props.change}>
               <option value="price-descending">Lowest Price</option>
