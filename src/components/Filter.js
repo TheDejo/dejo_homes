@@ -5,31 +5,16 @@ class Filter extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Adam',
-      displayFilter: false, 
+      name: 'Adam', 
     }
     this.neighborhoods = this.neighborhoods.bind(this)
     this.houseTypes = this.houseTypes.bind(this)
     this.beds = this.beds.bind(this)
     this.bath = this.bath.bind(this)
-    this.showFilter = this.showFilter.bind(this) 
-    this.hideFilter = this.hideFilter.bind(this) 
   }
 
   componentWillMount() {
     this.props.populateAction()
-  }
-
-  showFilter(event) {
-    event.preventDefault();
-    this.setState({ displayFilter:true }, () => {
-      document.addEventListener('click',this.hideFilter);
-    });
-  }
-  hideFilter() {
-    this.setState({ displayFilter: false }, () => {
-      document.removeEventListener('click',this.hideFilter);
-    });
   }
 
   neighborhoods() {
@@ -83,11 +68,6 @@ class Filter extends Component {
 render () {
   return (
     <section id="filter">
-      <div className='filter-button' onClick={this.showFilter}>
-        Filter <i class="fas fa-caret-down"></i>
-      </div>
-
-      { this.state.displayFilter ?  (
       <div className="inside">
         <span className='title'>City</span>
           <select name="neighborhood" className="filter-neighborhood" onChange={this.props.change}>
@@ -133,9 +113,6 @@ render () {
           </div>
         </div>
       </div>
-    ):
-    (null)
-    }
     </section>
   );
 }
