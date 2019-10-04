@@ -1,11 +1,11 @@
 iimport React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header.js';
-// import Filter from './Filter.js';
+import Filter from './Filter.js';
 import Listings from './Listings.js';
 import '../App.css';
 import '../Header.css';
-// import '../Filter.css';
+import '../Filter.css';
 import '../Listings.css';
 import listingsData from "./data/listingsData.js";
 
