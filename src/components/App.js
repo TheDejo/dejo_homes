@@ -1,4 +1,4 @@
-iimport React, { Component } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header.js';
 import Filter from './Filter.js';
@@ -20,7 +20,7 @@ class App extends Component {
       bedrooms: 1,
       baths: 1,
       min_price: 0,
-      max_price: 3000000,
+      max_price: 10000000,
       min_square_feet: 0,
       max_square_feet:10000,
       pool:false,
@@ -37,15 +37,16 @@ class App extends Component {
     this.populateForms = this.populateForms.bind(this)
     this.changeView = this.changeView.bind(this)
   }
+
   componentWillMount() {
     var listingsData = this.state.listingsData.sort((a,b) => {
       return a.price - b.price
     })
-
     this.setState({
       listingsData
     })
   }
+
   change(event) {
     var name = event.target.name;
     var value = (event.target.type === "checkbox") ? event.target.checked :event.target.value;
@@ -57,19 +58,21 @@ class App extends Component {
       this.filteredData()
     })
   }
+
   changeView(viewName) {
     this.setState ({
       view: viewName
     })
   }
+
   filteredData() {
     var newData = this.state.listingsData.filter((item) => {
       return item.price >= this.state.min_price
-          && item.price <= this.state.max_price
-          && item.floorSpace >= this.state.min_square_feet
-          && item.floorSpace <= this.state.max_square_feet
-          && item.rooms >= this.state.bedrooms
-          && item.bath >= this.state.baths
+            && item.price <= this.state.max_price
+            && item.floorSpace >= this.state.min_square_feet
+            && item.floorSpace <= this.state.max_square_feet
+            && item.rooms >= this.state.bedrooms
+            && item.bath >= this.state.baths
     })
     // NEIGHBORHOOD FILTER
     if (this.state.neighborhood !== 'All') {
@@ -126,6 +129,7 @@ class App extends Component {
       filteredData: newData
     })
   }
+
   populateForms() {
     // neighborhood
     var neighborhoods = this.state.listingsData.map((item) => {
@@ -133,7 +137,6 @@ class App extends Component {
     })
     neighborhoods = new Set(neighborhoods)
     neighborhoods = [...neighborhoods]
-
     neighborhoods = neighborhoods.sort()
 
     // houseType
@@ -142,7 +145,6 @@ class App extends Component {
     })
     houseTypes = new Set(houseTypes)
     houseTypes = [...houseTypes]
-
     houseTypes = houseTypes.sort()
 
     // rooms
@@ -151,24 +153,22 @@ class App extends Component {
     })
     beds = new Set(beds)
     beds = [...beds]
-
     beds = beds.sort()
 
     // baths
-    var bath = this.state.listingsData.map((item) => {
+    var bathroom = this.state.listingsData.map((item) => {
       return item.bath
     })
-    bath = new Set(bath)
-    bath = [...bath]
-
-    bath = bath.sort()
+    bathroom = new Set(bathroom)
+    bathroom = [...bathroom]
+    bathroom = bathroom.sort()
 
     this.setState ({
       populateFormsData: {
         neighborhoods,
         houseTypes,
         beds,
-        bath
+        bathroom
       },
     },() => {
         console.log(this.state);
@@ -180,6 +180,7 @@ render () {
     <div>
       <Header listingsData={this.state.filteredData} change={this.change} globalState={this.state} populateAction={this.populateForms}/>
       <section id='content-area'>
+        <Filter listingsData={this.state.filteredData} change={this.change} globalState={this.state} populateAction={this.populateForms} changeView={this.changeView}/>
         <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} populateAction={this.populateForms} changeView={this.changeView}/>
       </section>
     </div>
