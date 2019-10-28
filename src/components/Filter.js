@@ -76,54 +76,58 @@ render () {
     <section id="filter">
       <div className="inside">
 
-        <div className='container' style={{width:'12%',float:'left',position:'relative'}}>
-          <div className='inner-neighborhood-container' style={{border:'1px solid black',borderRadius:'8px'}}>
-            <select name="neighborhood" className="filter-neighborhood" onChange={this.props.change}>
-              <option value='All'>All Cities</option>
-              {this.neighborhoods()}
-            </select>
-          </div>
-        </div>
+        <div className='button-container'>
+          <div className='inner-button-container'>
+            <div className='container'>
+              <div className='inner-neighborhood-container' style={{border:'1px solid black',borderRadius:'8px'}}>
+                <select name="neighborhood" className="filter-neighborhood" onChange={this.props.change}>
+                  <option value='All'>All Cities</option>
+                  {this.neighborhoods()}
+                </select>
+              </div>
+            </div>
 
-        <div className='container' style={{width:'12%',float:'left',position:'relative'}}>
-          <div className='inner-house-container' style={{border:'1px solid black',borderRadius:'8px'}}>
-            <select name="houseType" className="filter-houseType" onChange={this.props.change}>
-              <option value='All'>All Types</option>
-                {this.houseTypes()}
-            </select>
-          </div>
-        </div>
+            <div className='container'>
+              <div className='inner-house-container' style={{border:'1px solid black',borderRadius:'8px'}}>
+                <select name="houseType" className="filter-houseType" onChange={this.props.change}>
+                  <option value='All'>All Types</option>
+                    {this.houseTypes()}
+                </select>
+              </div>
+            </div>
 
-        <div className='container' style={{width:'12%',float:'left',position:'relative'}}>
-          <div className='inner-bedrooms-container' style={{border:'1px solid black',borderRadius:'8px'}}>
-            <select name="bedrooms" className=" filter-rooms" onChange={this.props.change}>
-              {this.beds()}
-            </select>
-          </div>
-        </div>
+            <div className='container'>
+              <div className='inner-bedrooms-container' style={{border:'1px solid black',borderRadius:'8px'}}>
+                <select name="bedrooms" className=" filter-rooms" onChange={this.props.change}>
+                  {this.beds()}
+                </select>
+              </div>
+            </div>
 
-        <div className='container' style={{width:'12%',float:'left',position:'relative'}}>
-          <div className='inner-baths-container' style={{border:'1px solid black',borderRadius:'8px'}}>
-            <select name="baths" className="filter-baths" onChange={this.props.change}>
-              {this.bathroom()}
-            </select>
+            <div className='container'>
+              <div className='inner-baths-container' style={{border:'1px solid black',borderRadius:'8px'}}>
+                <select name="baths" className="filter-baths" onChange={this.props.change}>
+                  {this.bathroom()}
+                </select>
+              </div>
+            </div>
           </div>
         </div>
 
         <div id="extra-filters" className="filter-extras">
           <div className='extras-wrapper'>
-            <span style={{display:'inline',fontSize:'22px',fontWeight:'300',marginRight:'10px'}}>Extras |</span>
+            <span className='filter-title'>Extras |</span>
             <label htmlFor="extras" style={{marginRight:'10px'}}>
               <span style={{fontWeight:'300'}}>Pool</span>
-                <input name='pool' value='pool' type='checkbox' onChange={this.props.change} style={{marginLeft:'10px'}}/>
+                <input name='pool' value='pool' type='checkbox' onChange={this.props.change}/>
             </label>
             <label htmlFor="extras" style={{marginRight:'10px'}}>
               <span style={{fontWeight:'300'}}>Two Car Garage</span>
-                <input name='two_car_garage' value='two_car_garage' type='checkbox' onChange={this.props.change} style={{marginLeft:'10px'}}/>
+                <input name='two_car_garage' value='two_car_garage' type='checkbox' onChange={this.props.change}/>
             </label>
             <label htmlFor="extras" style={{marginRight:'10px'}}>
               <span style={{fontWeight:'300'}}>Finished Basement</span>
-                <input name='finished_basement' value='finished_basement' type='checkbox' onChange={this.props.change} style={{marginLeft:'10px'}}/>
+                <input name='finished_basement' value='finished_basement' type='checkbox' onChange={this.props.change}/>
             </label>
           </div>
         </div>
