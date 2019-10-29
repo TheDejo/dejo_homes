@@ -1,13 +1,10 @@
-/* MOBILE */
+//* MOBILE */
 @media only screen and (max-width:480px) {
   /* header*/
   header .logo {
     width: 100%;
     text-align: center;
-    color: #1F2732;
     font-size: 36px;
-    font-family: 'Bad Script', cursive;
-    margin: -14px 0 -30px 0;
   }
   .search-area {
     display: none;
@@ -19,51 +16,16 @@
   .inside {
     padding: 10px 0 0 4px;
   }
-  .inside i {
-    float: right;
-    position: absolute;
-    right: 10px;
-    top: 10%;
-  }
   .container {
     margin: 0 3px 0 3px;
     width: 23%;
   }
   select {
-    font-weight: 300;
-    padding: 3px 0px 3px 3px;
-    margin-bottom: 0;
-    width: 100%;
-    border: 0;
-    background: transparent;
     font-size: 11px;
-    outline:none;
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    text-align: center;
   }
   select:hover {
-    cursor: pointer;
     background: white;
     color: black;
-    transition: .2s ease-in-out;
-  }
-  select:focus {
-    outline: none;
-  }
-  input:focus {
-    outline: none;
-  }
-  input[type="text"] {
-    width: 6%;
-    margin-right: 3px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  input[placeholder] {
-    font-style: italic;
   }
   .filter-title {
     display: none;
@@ -81,242 +43,117 @@
     text-align: center;
   }
   /* listings */
-  #content-area {
-    overflow: auto;
-    width: 100%;
-  }
-  #listings {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    float: right;
-  }
-  .listing-wrapper {
-    height: 100%;
-  }
-  .sort {
-    margin-bottom: 10px;
-    width: 100%;
-  }
   .sort .main-results {
     font-size: 12px;
-    color: #216699;
-    display: inline-block;
     width: 40%;
-    float: left;
   }
   .sort .sort-options {
-    text-align: end;
+    text-align: right;
     width: 60%;
   }
   .sort .sort-options select {
-    margin-bottom: 0px;
-    width: 80px;
-    font-size: 11px;
-    border: 1px solid black;
+    width: 84px;
+    font-size: 10px;
   }
-  .sort .sort-options .view {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  .view .fa {
-    font-size: 16px;
-    margin-right: 15px;
-  }
-  .bottom-row {
-    height: 100%;
-  }
+  /* grid view */
   .col-md-3 {
     width: 50%;
     display: inline-block;
     vertical-align: top;
     padding:4px;
   }
-  .col-lg-6 {
+  .col-md-3 .col-md-9 {
     width: 100%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 15px;
-  }
-  .list-results {
-    padding-top: 30px;
-  }
-  .col-md-3 .list-results .list {
-    background: white;
-    height: 250px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 9px 13px 0px rgba(179,179,179,1);
-    -moz-box-shadow: 0px 13px 9px 0px rgba(179,179,179,1);
-    box-shadow: 0px 9px 13px 0px rgba(179,179,179,1);
-  }
-  .list-img {
-    background: url(https://i.pinimg.com/originals/de/ef/7a/deef7a9070f5de8c52ff5f4f4aec1e79.png) no-repeat center center;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    height:180px;
-
-    /* padding: 15px; */
-    color: white;
-    /* position: relative; */
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
   }
   .col-md-3 .list-img:hover .details {
     opacity: 1;
     height: 180px;
     transition: all .3s ease-in-out;
   }
-  .col-lg-6 .list-img:hover .details {
-    opacity: 1;
-    height: 185px;
-    transition: all .3s ease-in-out;
-  }
-  .list-img:hover .address {
-    opacity: 0;
-  }
   .col-md-3 .address {
-    position: absolute;
     padding: 156px 0 0 10px;
-    opacity: 1;
     font-size: 11px;
   }
-  .col-lg-6 .address {
-    position: absolute;
-    padding: 116px 0 0 10px;
-    opacity: 1;
-    font-size: 14px;
-  }
-  .details {
-    opacity: 0;
-    /* position: absolute; */
-    padding: 15px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgb(219,57,119); /* Old browsers */
-    background: -moz-linear-gradient(left, rgba(219,57,119,.7) 0%, rgba(255,93,177,.7) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(219,57,119,.7) 0%,rgba(255,93,177,.7) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(219,57,119,.7) 0%,rgba(255,93,177,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db3977', endColorstr='#ff5db1',GradientType=1 ); /* IE6-9 */
-  }
-  .col-lg-6 .details {
-    padding: 20px 0 0 0;
-  }
-  .user-img {
-    width: 36px;
-    height: 36px;
-    margin: -16px 0 0 -10px;
-    border-radius: 50%;
-    border: 2px solid white;
-    display: inline-block;
-    background: url(https://media.npr.org/assets/img/2013/04/22/3264616-henry-david-thoreau_custom-9ae367cce97607ec7c89076878a316c8b4c48b7c-s800-c85.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .col-lg-6 .list-details {
-    margin-left: 0px;
-  }
   .col-md-3 .user-img {
-    width: 36px;
-    height: 36px;
     margin: -10px 0 0 -6px;
-    border-radius: 50%;
-    border: 2px solid white;
-    display: inline-block;
-    background: url(https://media.npr.org/assets/img/2013/04/22/3264616-henry-david-thoreau_custom-9ae367cce97607ec7c89076878a316c8b4c48b7c-s800-c85.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .col-lg-6 .col-md-3 .user-img {
-    width:50px;
-    height: 50px;
-  }
-  .user-img:hover:active {
-    font-size: 40px;
-  }
-  .col-md-3 .col-md-9 {
-    width: 100%;
   }
   .col-md-3 .user-details {
-    vertical-align: top;
-    display: inline-block;
     margin-left: 0px;
-  }
-  .user-name {
-    color: white;
-    display: block;
-    font-size: 14px;
-    margin-bottom: 0px;
-  }
-  .post-date {
-    color: white;
-    opacity: .7;
-    display: block;
-    font-size: 12px;
-    font-weight: 300;
   }
   .col-md-3 .list-details {
     margin-top: 10px;
     margin-left: 0px;
   }
-  .list-details {
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-  .list-details .fa {
-    display: inline-block;
-    margin-right: 14px;
-  }
-  .list-details span {
-    font-size: 12px;
-    padding-right: 4px;
-    font-weight: 300;
-    vertical-align: middle;
-    position: relative;
-  }
-  .bottom-info {
-    padding: 20px 15px;
-  }
-  .price {
-    font-size: 16px;
-    display: block;
-    margin-bottom: 10px;
-    color: grey;
-  }
   .col-md-3 .location {
     font-size: 12px;
-    display: block;
-    color: grey;
   }
   .col-md-3 .location .fa {
     color: #216699;
-    padding-right: 2px
+    padding-right: 4px
+  }
+  /* grid view end */
+
+  /* horizontal view */
+  .col-lg-6 {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+  }
+  .col-lg-6 .col-md-9 {
+    font-size:20px;
+    width:100%;
+    text-align:center;
+    margin-top:-46px;
+  }
+  .col-lg-6 .list-img:hover .details {
+    opacity: 1;
+    height: 180px;
+    transition: all .3s ease-in-out;
+  }
+  .col-lg-6 .details {
+    padding: 20px 0 0 0;
+  }
+  .col-lg-6 .list-details {
+    margin-left: 0px;
+  }
+  .col-lg-6 .address {
+    position: absolute;
+    padding: 154px 0 0 10px;
+    opacity: 1;
+    font-size: 14px;
+  }
+  .col-lg-6 .user-img {
+    width:40px;
+    height: 40px;
+    margin: -10px 0 0 10px;
+  }
+  .col-lg-6 .user-name {
+    font-size: 18px;
+  }
+  .col-lg-6 .bedrooms {
+    margin-left: -24px;
+  }
+  .col-lg-6 .baths {
+    margin-left: -18px;
+  }
+  /* horizontal view end */
+
+  .list-img {
+    height:180px;
+  }
+  #pagination .pages li {
+    display: inline-block;
+    padding: 20px 15px;
   }
 }
-
 
 /* TABLETS */
 @media only screen and (min-width:481px) and (max-width:1024px) {
   header .logo {
     width: 100%;
     text-align: center;
-    color: #1F2732;
     font-size: 36px;
-    font-family: 'Bad Script', cursive;
-    margin: -14px 0 -30px 0;
   }
   .search-area {
     display: none;
@@ -328,52 +165,15 @@
   .inside {
     padding: 10px 0 0 0px;
   }
-  .inside i {
-    float: right;
-    position: absolute;
-    right: 10px;
-    top: 10%;
-  }
   .container {
     margin: 0;
     width: 25%;
     padding: 0 10px 0 10px;
   }
   select {
-    font-weight: 300;
     padding: 3px 0px 3px 3px;
     margin-bottom: 0;
-    width: 100%;
-    border: 0;
-    background: transparent;
     font-size: 20px;
-    outline:none;
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    text-align: center;
-  }
-  select:hover {
-    cursor: pointer;
-    background: white;
-    color: black;
-    transition: .2s ease-in-out;
-  }
-  select:focus {
-    outline: none;
-  }
-  input:focus {
-    outline: none;
-  }
-  input[type="text"] {
-    width: 6%;
-    margin-right: 3px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  input[placeholder] {
-    font-style: italic;
   }
   .filter-title {
     display: none;
@@ -384,6 +184,9 @@
     float: none;
     margin: 40px 0 0 0;
   }
+  .filter-extras label {
+    margin-right: 20px;
+  }
   .filter-extras input {
     margin-left: 4px;
   }
@@ -392,237 +195,126 @@
     font-size: 20px;
   }
   /* listings */
-  #content-area {
-    overflow: auto;
-    width: 100%;
-  }
-  #listings {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    float: right;
-  }
-  .listing-wrapper {
-    height: 100%;
-  }
-  .sort {
-    margin-bottom: 10px;
-    width: 100%;
-  }
   .sort .main-results {
     font-size: 12px;
-    color: #216699;
-    display: inline-block;
     width: 40%;
-    float: left;
   }
   .sort .sort-options {
-    text-align: end;
+    text-align: right;
     width: 60%;
   }
   .sort .sort-options select {
-    margin-bottom: 0px;
     width: 80px;
     font-size: 11px;
-    border: 1px solid black;
   }
-  .sort .sort-options .view {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  .view .fa {
-    font-size: 16px;
-    margin-right: 15px;
-  }
-  .bottom-row {
-    height: 100%;
-  }
+  /* grid view */
   .col-md-3 {
     width: 50%;
-    display: inline-block;
-    vertical-align: top;
     padding:10px;
   }
-  .col-lg-6 {
+  .col-md-3 .col-md-9 {
     width: 100%;
     display: inline-block;
-    vertical-align: top;
-    padding: 30px;
-  }
-  .list-results {
-    padding-top: 30px;
-  }
-  .col-md-3 .list-results .list {
-    background: white;
-    height: 250px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 9px 13px 0px rgba(179,179,179,1);
-    -moz-box-shadow: 0px 13px 9px 0px rgba(179,179,179,1);
-    box-shadow: 0px 9px 13px 0px rgba(179,179,179,1);
-  }
-  .list-img {
-    background: url(https://i.pinimg.com/originals/de/ef/7a/deef7a9070f5de8c52ff5f4f4aec1e79.png) no-repeat center center;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    height:180px;
-    /* padding: 15px; */
-    color: white;
-    /* position: relative; */
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  .col-lg-6 .list-img {
-    height: 300px;
   }
   .col-md-3 .list-img:hover .details {
     opacity: 1;
     height: 180px;
     transition: all .3s ease-in-out;
   }
+  .col-md-3 .address {
+    padding: 156px 0 0 10px;
+    font-size: 11px;
+  }
+  .col-md-3 .location {
+    font-size: 12px;
+  }
+  .col-md-3 .location .fa {
+    padding-right: 2px
+  }
+  .col-md-3 .list-results .list {
+    height: 250px;
+  }
+  .col-md-3 .user-img {
+    margin: -10px 0 0 -6px;
+  }
+  .col-md-3 .user-details {
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: -46px;
+    width: 100%;
+    text-align: center;
+  }
+  .col-md-3 .list-details {
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 55%;
+    float: right;
+  }
+  .col-md-3 .bedrooms {
+    margin-left: -2px;
+  }
+  .col-md-3 .baths {
+    margin-left: 3px;
+  }
+  /* grid view end */
+
+  /* horizontal view */
+  .col-lg-6 {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 30px;
+  }
+  .col-lg-6 .col-md-9 {
+    font-size:26px;
+    width:100%;
+    text-align:center;
+    margin-top:-46px;
+  }
+  .col-lg-6 .list-img {
+    height: 300px;
+  }
   .col-lg-6 .list-img:hover .details {
     opacity: 1;
-    height: 185px;
+    height: 300px;
     transition: all .3s ease-in-out;
-  }
-  .list-img:hover .address {
-    opacity: 0;
-  }
-  .col-md-3 .address {
-    position: absolute;
-    padding: 156px 0 0 10px;
-    opacity: 1;
-    font-size: 11px;
   }
   .col-lg-6 .address {
     position: absolute;
-    padding: 116px 0 0 10px;
+    padding: 270px 0 0 10px;
     opacity: 1;
-    font-size: 14px;
-  }
-  .details {
-    opacity: 0;
-    /* position: absolute; */
-    padding: 15px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgb(219,57,119); /* Old browsers */
-    background: -moz-linear-gradient(left, rgba(219,57,119,.7) 0%, rgba(255,93,177,.7) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(219,57,119,.7) 0%,rgba(255,93,177,.7) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(219,57,119,.7) 0%,rgba(255,93,177,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db3977', endColorstr='#ff5db1',GradientType=1 ); /* IE6-9 */
+    font-size: 17px;
   }
   .col-lg-6 .details {
     padding: 20px 0 0 0;
-  }
-  .user-img {
-    width: 36px;
-    height: 36px;
-    margin: -16px 0 0 -10px;
-    border-radius: 50%;
-    border: 2px solid white;
-    display: inline-block;
-    background: url(https://media.npr.org/assets/img/2013/04/22/3264616-henry-david-thoreau_custom-9ae367cce97607ec7c89076878a316c8b4c48b7c-s800-c85.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    height: 300px;
   }
   .col-lg-6 .list-details {
     margin-left: 0px;
   }
-  .col-md-3 .user-img {
-    width: 36px;
-    height: 36px;
-    margin: -10px 0 0 -6px;
-    border-radius: 50%;
-    border: 2px solid white;
-    display: inline-block;
-    background: url(https://media.npr.org/assets/img/2013/04/22/3264616-henry-david-thoreau_custom-9ae367cce97607ec7c89076878a316c8b4c48b7c-s800-c85.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  .col-lg-6 .user-name {
+    font-size: 22px;
+  }
+  .col-lg-6 .post-date {
+    font-size: 18px;
   }
   .col-lg-6 .col-md-3 .user-img {
-    width:50px;
-    height: 50px;
+    width:60px;
+    height: 60px;
   }
-  .user-img:hover:active {
-    font-size: 40px;
+  .col-lg-6 .bedrooms {
+    margin-left: -36px;
   }
-  .col-md-3 .col-md-9 {
-    width: 100%;
+  .col-lg-6 .baths {
+    margin-left: -30px;
   }
-  .col-md-3 .user-details {
-    vertical-align: top;
-    display: inline-block;
-    margin-left: 0px;
-    margin-top: -10px;
-    width: 100%;
-    text-align: center;
+  .col-lg-6 .list-details span {
+    font-size: 18px;
   }
-  .user-name {
-    color: white;
-    display: block;
-    font-size: 14px;
-    margin-bottom: 0px;
-  }
-  .post-date {
-    color: white;
-    opacity: .7;
-    display: block;
-    font-size: 12px;
-    font-weight: 300;
-  }
-  .col-md-3 .list-details {
-    margin-top: 10px;
-    margin-right: 30px;
-    width: 55%;
-    float: right;
+  /* horizontal view end */
 
-  }
-  .list-details {
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-  .list-details .fa {
-    display: inline-block;
-    margin-right: 14px;
-  }
-  .list-details span {
-    font-size: 12px;
-    padding-right: 4px;
-    font-weight: 300;
-    vertical-align: middle;
-    position: relative;
-  }
-  .bottom-info {
-    padding: 20px 15px;
-  }
-  .price {
-    font-size: 16px;
-    display: block;
-    margin-bottom: 10px;
-    color: grey;
-  }
-  .col-md-3 .location {
-    font-size: 12px;
-    display: block;
-    color: grey;
-  }
-  .col-md-3 .location .fa {
-    color: #216699;
-    padding-right: 2px
+  .list-img {
+    height:180px;
   }
 }
 
