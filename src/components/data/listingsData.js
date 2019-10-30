@@ -66,7 +66,7 @@ var listingsData = [
     floorSpace: 2100,
     finished_basement:true,
     houseType:'Single Story',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELWlv4pmZEl9NkHN3CxigerME2J0RrsX0OxgxWZhLGWKcn1weRA'
+    image: 'https://i.pinimg.com/originals/8e/0d/03/8e0d03e33d777ab51296adabad1312ca.jpg'
   },
   {
     address: "3690 Principle Ln.",
@@ -81,7 +81,7 @@ var listingsData = [
     pool:true,
     two_car_garage:true,
     houseType:'Two Story',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdBggUKxFndfmWgFDdDJmO1EMi8f8PgpbGCQ1hNQ-QyHCT7Oktdw'
+    image: 'https://cdn.shopify.com/s/files/1/2184/4991/products/fe2aaa908799f28f5433397a05ab9c73_1400x.jpg?v=1559917159'
   },
   {
     address: "2628 Vinci St.",
@@ -107,7 +107,7 @@ var listingsData = [
     floorSpace: 3350,
     two_car_garage:true,
     houseType:'Two Story',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAUVN1dNUXLpwybly83GuUpc-6l_NHRLbGgWecoJXfHycA40aalQ'
+    image: 'https://assets.architecturaldesigns.com/plan_assets/73342/large/73342hs_1467752392_1479214668.jpg?1506333612'
   }
 ]
 
