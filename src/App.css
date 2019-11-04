@@ -1,50 +1,9 @@
-/* colors */
-  /* pink:#DB3977
-    black:#1F2732
-    blue:#216699
-    turqoise:#00BEA3
-    offwhite:#FFFDEA */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
-header {
-  background: #1F2732;
-  width: 100%;
-  overflow: auto;
-  padding: 20px 15px;
-
-}
-header .logo {
-  float: left;
-  color: white;
-  font-size: 30px;
-  /* font-family: 'Indie Flower', cursive; */
-  font-family: 'Bad Script', cursive;
-  margin: -20px 0;
-}
-header nav {
-  float: right;
-}
-header a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-}
-header a:hover {
-  color: #DB3977;
-  transition: .2s ease-in-out;
-}
-header .signup-button {
-  background: #216699;
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  border-radius: 5px;
-}
-header .signup-button:hover {
-  background: #DB3977;
-  color: white;
+html, body {
+  height: 100%;
 }
