@@ -1,4 +1,4 @@
-iimport React, { Component } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header.js';
 import Filter from './Filter.js';
