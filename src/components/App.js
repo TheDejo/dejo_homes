@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+iimport React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header.js';
 import Filter from './Filter.js';
@@ -7,6 +7,7 @@ import '../App.css';
 import '../Header.css';
 import '../Filter.css';
 import '../Listings.css';
+import '../queries.css';
 import listingsData from "./data/listingsData.js";
 
 class App extends Component {
@@ -190,3 +191,4 @@ render () {
 export default App;
 const root = document.getElementById('root');
 ReactDOM.render(<App />,root);
+
