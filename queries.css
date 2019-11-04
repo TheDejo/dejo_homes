@@ -743,7 +743,7 @@
 @media only screen and (min-width:1800px) {
   /* header */
   header {
-    background: red;
+    background: white;
     width: 100%;
     overflow: auto;
     padding: 20px;
