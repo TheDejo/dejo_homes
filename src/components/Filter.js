@@ -117,15 +117,15 @@ render () {
         <div id="extra-filters" className="filter-extras">
           <div className='extras-wrapper'>
             <span className='filter-title'>Extras |</span>
-            <label htmlFor="extras" style={{marginRight:'10px'}}>
+            <label htmlFor="extras">
               <span style={{fontWeight:'300'}}>Pool</span>
                 <input name='pool' value='pool' type='checkbox' onChange={this.props.change}/>
             </label>
-            <label htmlFor="extras" style={{marginRight:'10px'}}>
+            <label htmlFor="extras">
               <span style={{fontWeight:'300'}}>Two Car Garage</span>
                 <input name='two_car_garage' value='two_car_garage' type='checkbox' onChange={this.props.change}/>
             </label>
-            <label htmlFor="extras" style={{marginRight:'10px'}}>
+            <label htmlFor="extras">
               <span style={{fontWeight:'300'}}>Finished Basement</span>
                 <input name='finished_basement' value='finished_basement' type='checkbox' onChange={this.props.change}/>
             </label>
