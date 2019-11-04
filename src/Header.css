@@ -4,11 +4,10 @@ header {
   overflow: auto;
   padding: 20px;
   border-bottom: 1px solid lightgrey;
-  position: fixed;
 }
 header .logo {
   float: left;
-  width: 25%;
+  width: 33%;
   color: #1F2732;
   font-size: 34px;
   font-family: 'Bad Script', cursive;
@@ -19,7 +18,7 @@ header .logo .home {
     color: #DB3977;
 }
 .search-area  {
-  width: 50%;
+  width: 33%;
   float: left;
   margin-bottom: -18px;
 }
@@ -39,7 +38,6 @@ header nav {
   float: right;
   padding-top: 8px;
   font-size: 18px;
-  width: 25%;
 }
 header a {
   color: #1F2732;
