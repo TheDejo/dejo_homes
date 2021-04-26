@@ -13,7 +13,7 @@ class Header extends Component {
 render () {
   return (
       <header>
-        <div className="logo"><span className="home">HOME</span>ble</div>
+        <div className="logo"><span className="home">Dejo</span>homes</div>
         <section className="search-area">
           <input type='text' name="search" placeholder="Search" onChange={this.props.change}/>
         </section>
